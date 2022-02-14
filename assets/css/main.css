@@ -27,6 +27,8 @@ i:hover {
 	display: flex;
 	flex-direction: column;
   padding: 12px;
+  min-width: 275px;
+  max-width: 350px;
 }
 #sidebar > img {
   margin: 12px;
@@ -58,7 +60,11 @@ footer{
 }
 
 #content {
+  display: flex;
+  flex-direction: column;
   max-height:calc(100vh);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #content-container{
@@ -69,22 +75,23 @@ footer{
   padding: 0;
   margin-top: 10%;
   display: flex;
-  margin-left: 10%;
+  width: 100%;
 }
 
 .nav-item{
   text-align: left;
   border-radius: 5px;
   color: var(--bs-light);
+  width: max-content;
   
 }
 
 .nav-link {
   padding: 0.5rem 1rem;
-  margin: 0.5rem;
   border-radius: 0.25rem;
   color: var(--bs-light);
   text-decoration: none;
+  width: 100%;
 }
 
 .nav-link.active{
@@ -95,4 +102,86 @@ footer{
   color: #0a58ca !important;
   /* color | offset-x | offset-y | blur-radius */
   box-shadow: inset 3px 0px 0px 0px #0a58ca;
+}
+
+/** --------------------------------------------
+*Identity (landing/ overview of sub-pages)
+-------------------------------------------- **/
+
+.identity > h1 {
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.identity > .content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-between;
+}
+
+.identity {
+  padding: 16px;
+}
+
+.content > .card {
+  margin: 12px;
+  border-radius: 5px;
+  background-color: inherit;
+}
+
+.card-body i{
+  color: var(--bs-dark);
+}
+
+.card-body .bi {
+  transition: .3s transform ease-in-out;
+}
+
+.card-body .collapsed .bi {
+  transform: rotate(90deg);
+}
+
+.topic-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 800px;
+}
+
+.topic {
+  min-width: 200px;
+}
+
+.card-title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapse-icon{
+  display: inline-block;
+}
+
+.card{
+  width: 100%;
+}
+
+.card-body > a{
+  color:#0a58ca;
+  text-decoration: none;
+  padding-bottom: 16px;
+}
+
+
+.card-title, .card-text{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.collapsing {
+  height: 0px;
+  overflow: hidden;
 }
