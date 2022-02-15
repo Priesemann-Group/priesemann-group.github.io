@@ -134,6 +134,7 @@
   window.addEventListener("hashchange",()=>{
     current_active = getCurrentPage();
     loadcontent(current_active);
+
     // Set active link
     const activeLink = document.querySelector(`#navlink_${current_active}`).parentElement;
     activeLink.classList.add("active");
@@ -147,6 +148,7 @@
 
   // Initial load
   var current_active = "research";
+  document.on
   current_active = getCurrentPage();
   var event = new Event('hashchange');
   window.dispatchEvent(event);
