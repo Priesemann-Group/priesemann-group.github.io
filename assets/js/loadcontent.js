@@ -58,8 +58,7 @@ function getPublicationDetails(id){
  *  - citationCount
  *  - paperId  
  */
-function detailsToDom(details){
-    console.log(details);
+function detailsToDom(details, overwrite){
     let div = document.createElement("div");
     div.classList.add("publication");
 
@@ -113,7 +112,29 @@ function detailsToDom(details){
     authors.appendChild(ul);
     div.appendChild(authors);
 
+    /** --------------------------------
+     * Abstract
+     * --------------------------------- */
+    let abstract_text = details.abstract;
+    if (overwrite.abstract != null){
+        abstract_text = overwrite.abstract;
+    }
 
+    //Container
+    let abstract = document.createElement("div");
+    abstract.classList.add("publication-abstract");
+    
+    //Header
+    let text_prefix= document.createElement("p");
+    text_prefix.innerHTML = "<em>Abstract:</em> ";
+    
+    //Text from semantic
+    text_prefix.innerHTML += abstract_text;
+    abstract.appendChild(text_prefix);
+
+
+    div.appendChild(abstract);
+    
     return div;
 }
 
@@ -127,7 +148,7 @@ function publications(){
     Array.from(pub_container).forEach(element => {
         getPublicationDetails(element.dataset.id)
             .then(function(details){
-                element.appendChild(detailsToDom(details));
+                element.appendChild(detailsToDom(details, element.dataset));
             });
     });
 }
