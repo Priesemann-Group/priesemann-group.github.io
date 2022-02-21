@@ -1,6 +1,7 @@
 html,body{
   overflow-y: hidden;
   font-family: 'Lato', sans-serif;
+  font-size: 1em;
 }
 
 a.icon-link {
@@ -29,7 +30,7 @@ i:hover {
 	flex-direction: column;
   padding: 12px;
   min-width: 275px;
-  max-width: 350px;
+  max-width: 300px;
 }
 #sidebar > img {
   margin: 12px;
@@ -119,6 +120,7 @@ footer{
   text-align: center;
   margin: 0;
   margin-bottom: 16px;
+
 }
 
 .identity > .content{
@@ -220,7 +222,7 @@ footer{
   margin-left: 30%;
   margin-right: 30%;
 }
-.publications > h1,h2,h3,h4,h5,h6{
+.publications > h1,.publications > h2,.publications > h3,.publications > h4,.publications > h5,.publications > h6{
   text-align: left;
 }
 .publications > h3 {
