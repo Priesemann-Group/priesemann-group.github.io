@@ -143,11 +143,13 @@
         toggleIcon.classList.remove("bi-arrow-left-circle");
         toggleIcon.classList.add("bi-arrow-right-circle");
       }
-      // Start open
-      openSidebar();
 
-      // Start closed
-      // closeSidebar();
+      // Start open on desktop, closed on mobile
+      if (window.innerWidth >= 992) {  // Bootstrap's lg breakpoint
+        openSidebar();
+      } else {
+        closeSidebar();
+      }
 
       toggleBtn.addEventListener("click", function (e) {
         e.stopPropagation();
@@ -176,7 +178,7 @@
         }
       }
 
-      function onHashChange() {
+      function onHashChange(e) {
         current_active = getCurrentPage();
         if (typeof loadcontent === "function") {
           loadcontent(current_active);
@@ -185,7 +187,8 @@
           const li = document.querySelector(`#navlink_${link}`)?.parentElement;
           if (li) li.classList.toggle("active", link === current_active);
         });
-        // closeSidebar(); // Optionally close after nav
+
+        if (e?.isTrusted) closeSidebar(); // Optionally close after nav. Only close when the hash change was user-initiated (e.g., clicking a link)
       }
 
       // Initial load
