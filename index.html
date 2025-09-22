@@ -72,10 +72,16 @@
         <nav id="navbar" class="navbar navbar-dark bg-dark text-light">
           <ul class="nav flex-column">
             <li class="nav-item">
+              <a id="navlink_overview" class="nav-link" href="#overview">Research Overview</a>
+            </li>
+            <li class="nav-item">
               <a id="navlink_research" class="nav-link" href="#research">Research Topics</a>
             </li>
             <li class="nav-item">
-              <a id="navlink_group" class="nav-link" href="#group">Group members</a>
+              <a id="navlink_group" class="nav-link" href="#group">Group Members</a>
+            </li>
+            <li class="nav-item">
+              <a id="navlink_openpositions" class="nav-link" href="#openpositions">Open Positions</a>
             </li>
             <li class="nav-item">
               <a id="navlink_cv" class="nav-link" href="#cv">CV</a>
@@ -137,8 +143,11 @@
         toggleIcon.classList.remove("bi-arrow-left-circle");
         toggleIcon.classList.add("bi-arrow-right-circle");
       }
+      // Start open
+      openSidebar();
+
       // Start closed
-      closeSidebar();
+      // closeSidebar();
 
       toggleBtn.addEventListener("click", function (e) {
         e.stopPropagation();
@@ -176,11 +185,11 @@
           const li = document.querySelector(`#navlink_${link}`)?.parentElement;
           if (li) li.classList.toggle("active", link === current_active);
         });
-        closeSidebar(); // Optionally close after nav
+        // closeSidebar(); // Optionally close after nav
       }
 
       // Initial load
-      var current_active = "research";
+      var current_active = "overview";
       current_active = getCurrentPage();
       window.addEventListener("hashchange", onHashChange);
       var event = new Event('hashchange');
