@@ -479,3 +479,9 @@ footer {
     max-width: 96vw;
   }
 }
+
+@media (max-width: 600px) {
+  .identity img {
+    object-position: right center; 
+  }
+}
