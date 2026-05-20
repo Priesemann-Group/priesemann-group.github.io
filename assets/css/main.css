@@ -248,10 +248,37 @@ footer {
 }
 
 .nav-item.active {
-  background: #e9f3fc;
+  background: transparent;        
   box-shadow: none;
   border-left: 4px solid #0a58ca;
   color: #0a58ca !important;
+}
+
+.nav-item.active > .nav-link {
+  background: #000000;          
+}
+
+.nav-link-sub {
+  font-size: 0.88rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: rgb(255, 255, 255) !important;
+  border-left: 2px solid rgba(255,255,255,0.15);
+  padding-left: 0.75rem;
+}
+.nav-link-sub:hover{
+  background: #000000;
+  color: #0a58ca !important;
+}
+
+.nav-link-sub.active {
+  color: #0a58ca !important;
+}
+.subnav-chevron {
+  transition: transform 0.2s ease;
+}
+[aria-expanded="true"] .subnav-chevron {
+  transform: rotate(180deg);
 }
 
 /* Identity (landing/ overview of sub-pages) */

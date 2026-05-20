@@ -1,4 +1,17 @@
-function loadcontent(name){
+function loadcontent(name) {
+    // Event sub-pages live in ./content/events/
+    const eventPages = [
+        "event-cics-day",
+        "event-salon-debatte",
+        "event-research-ethics",
+        "event-limits-intelligence",
+        "event-nnd"
+    ];
+
+    const filePath = eventPages.includes(name)
+        ? "./content/events/" + name + ".html"
+        : "./content/" + name + ".html";
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -9,11 +22,11 @@ function loadcontent(name){
                 var navlink = navlinks[i];
                 navlink.classList.remove("active");
             };
-            document.getElementById('navlink_'+name).classList.add("active");
+            document.getElementById('navlink_' + name).classList.add("active");
         };
         publications();
     };
-    xhttp.open("GET", "./content/"+name+".html", true);
+    xhttp.open("GET", filePath, true);
     xhttp.send();
 };
 

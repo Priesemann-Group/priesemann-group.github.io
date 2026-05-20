@@ -90,7 +90,44 @@
               <a id="navlink_blog" class="nav-link" href="#blog">Blog</a>
             </li>
             <li class="nav-item">
-              <a id="navlink_events" class="nav-link" href="#events">Events</a>
+              <a id="navlink_events" class="nav-link nav-link-parent d-flex justify-content-between align-items-center"
+                 href="#events"
+                 data-bs-toggle="collapse"
+                 data-bs-target="#events-subnav"
+                 aria-expanded="false"
+                 aria-controls="events-subnav">
+                Events
+                <i class="bi bi-chevron-down subnav-chevron ms-2" style="font-size:0.75rem;"></i>
+              </a>
+              <div class="collapse show" id="events-subnav">
+                <ul class="nav flex-column ms-3">
+                  <li class="nav-item">
+                    <a id="navlink_event-cics-day" class="nav-link nav-link-sub" href="#event-cics-day">
+                      Göttingen CICS Day
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="navlink_event-salon-debatte" class="nav-link nav-link-sub" href="#event-salon-debatte">
+                      Salon-Debatte
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="navlink_event-research-ethics" class="nav-link nav-link-sub" href="#event-research-ethics">
+                      Research Ethics
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="navlink_event-limits-intelligence" class="nav-link nav-link-sub" href="#event-limits-intelligence">
+                      Limits of Intelligence
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="navlink_event-nnd" class="nav-link nav-link-sub" href="#event-nnd">
+                      Neural Networking Day
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item">
               <a id="navlink_openpositions" class="nav-link" href="#openpositions">Open Positions</a>
