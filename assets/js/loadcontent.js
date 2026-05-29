@@ -1,11 +1,12 @@
 function loadcontent(name) {
     // Event sub-pages live in ./content/events/
     const eventPages = [
+        "event-cidas-marketplace",
         "event-cics-day",
-        "event-salon-debatte",
-        "event-research-ethics",
         "event-limits-intelligence",
-        "event-nnd"
+        "event-nnd",
+        "event-research-ethics",
+        "event-salon-debatte",
     ];
 
     const filePath = eventPages.includes(name)
