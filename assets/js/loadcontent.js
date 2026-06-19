@@ -1,6 +1,7 @@
 function loadcontent(name) {
     // Event sub-pages live in ./content/events/
     const eventPages = [
+        "event-subcortical-2027",
         "event-cidas-marketplace",
         "event-cics-day",
         "event-limits-intelligence",
