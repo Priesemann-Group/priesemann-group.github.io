@@ -1,0 +1,58 @@
+{% include base_path %}
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><span class="navicon"></span></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
+            <a href="{{ base_path }}/">{{ site.title }}</a>
+          </li>
+          {% for link in site.data.navigation.main %}
+            {% if link.children %}
+              {% assign child_is_active = false %}
+              {% for child in link.children %}
+                {% if page.url contains child.url %}
+                  {% assign child_is_active = true %}
+                {% endif %}
+              {% endfor %}
+              {% assign submenu_id = link.title | slugify | append: '-submenu' %}
+              <li class="masthead__menu-item masthead__menu-item--dropdown{% if forloop.first %} masthead__menu-item--first-nav{% endif %}{% if child_is_active %} selected{% endif %}">
+                <details class="masthead__dropdown">
+                  <summary class="masthead__dropdown-toggle" aria-controls="{{ submenu_id }}">
+                    {{ link.title }}
+                  </summary>
+                  <ul class="masthead__submenu" id="{{ submenu_id }}">
+                    {% for child in link.children %}
+                      {% if child.url contains 'http' %}
+                        {% assign child_domain = '' %}
+                      {% else %}
+                        {% assign child_domain = base_path %}
+                      {% endif %}
+                      <li{% if page.url contains child.url %} class="selected"{% endif %}>
+                        <a href="{{ child_domain }}{{ child.url }}">{{ child.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </details>
+              </li>
+            {% else %}
+              {% if link.url contains 'http' %}
+                {% assign domain = '' %}
+              {% else %}
+                {% assign domain = base_path %}
+              {% endif %}
+              <li class="masthead__menu-item{% if forloop.first %} masthead__menu-item--first-nav{% endif %}{% if page.url contains link.url and link.url != '/' %} selected{% endif %}">
+                <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+          <li id="theme-toggle" class="masthead__menu-item persist tail">
+            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+          </li>
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>

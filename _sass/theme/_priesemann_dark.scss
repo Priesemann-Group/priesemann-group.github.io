@@ -1,0 +1,54 @@
+/* ==========================================================================
+   PRIESEMANN THEME - DARK VERSION
+   ========================================================================== */
+
+$primary-color              : #006c66;
+$gray                       : #ffffff;
+$dark-gray                  : #000000;
+$darker-gray                : #000000;
+$light-gray                 : #ffffff;
+
+$danger-color               : #006c66;
+$info-color                 : #006c66;
+$notice-color               : #006c66;
+$success-color              : #006c66;
+$warning-color              : #006c66;
+
+$border-radius              : 4px;
+$box-shadow                 : none;
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+html[data-theme="dark"] {
+  --palette-main                       : #000000;
+  --palette-secondary                  : #000000;
+  --palette-accent                     : #006c66;
+  --global-base-color                  : #006c66;
+  --global-bg-color                    : #000000;
+  --global-surface-color               : #000000;
+  --global-secondary-color             : #000000;
+  --global-accent-color                : #006c66;
+  --global-accent-soft-color           : #000000;
+  --global-on-secondary-color          : #ffffff;
+  --global-heading-color               : #ffffff;
+  --global-muted-text-color            : #ffffff;
+  --global-footer-bg-color             : #000000;
+  --global-footer-text-color           : #ffffff;
+  --global-border-color                : #006c66;
+  --global-dark-border-color           : #ffffff;
+  --global-code-background-color       : #000000;
+  --global-code-text-color             : #ffffff;
+  --global-fig-caption-color           : #ffffff;
+  --global-link-color                  : #ffffff;
+  --global-link-color-hover            : #006c66;
+  --global-link-color-visited          : #ffffff;
+  --global-masthead-link-color         : #ffffff;
+  --global-masthead-link-color-hover   : #ffffff;
+  --global-text-color                  : #ffffff;
+  --global-text-color-light            : #ffffff;
+  --global-thead-color                 : #000000;
+}

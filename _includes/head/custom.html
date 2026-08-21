@@ -1,0 +1,32 @@
+{% include base_path %}
+
+<base href="{{ site.baseurl | append: '/' }}">
+<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32">
+
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.min.css">
+<link rel="stylesheet" href="{{ base_path }}/assets/css/fontawesome.css">
+
+<link rel="stylesheet" href="{{ base_path }}/assets/css/migration.css">
+
+<script>
+  (function () {
+    var routes = {
+      overview: '/', research: '/research/', group: '/group/', blog: '/blog/',
+      events: '/events/', openpositions: '/openpositions/', cv: '/cv/',
+      collaborations: '/collaborations/', contact: '/contact/',
+      'news-outreach': '/news-outreach/',
+      impressum: '/impressum/', datenschutz: '/datenschutz/',
+      'event-subcortical-2027': '/events/subcortical-2027/',
+      'event-cidas-marketplace': '/events/cidas-marketplace/',
+      'event-cics-day': '/events/cics-day/',
+      'event-limits-intelligence': '/events/limits-intelligence/',
+      'event-nnd': '/events/neural-networking-day/',
+      'event-research-ethics': '/events/research-ethics/',
+      'event-salon-debatte': '/events/salon-debatte/'
+    };
+    var key = window.location.hash.slice(1);
+    if (window.location.pathname === '/' && key && key !== 'overview' && routes[key]) {
+      window.location.replace('{{ site.baseurl }}' + routes[key]);
+    }
+  }());
+</script>

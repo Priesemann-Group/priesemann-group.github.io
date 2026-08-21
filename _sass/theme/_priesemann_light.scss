@@ -1,0 +1,57 @@
+/* ==========================================================================
+   PRIESEMANN THEME - LIGHT VERSION
+
+   Strict interface palette: Göttingen blue, black, and white.
+   ========================================================================== */
+
+$primary-color              : #153268;
+$gray                       : #000000;
+$dark-gray                  : #153268;
+$darker-gray                : #000000;
+$light-gray                 : #153268;
+$lighter-gray               : #ffffff;
+
+$danger-color               : #153268;
+$info-color                 : #153268;
+$notice-color               : #153268;
+$success-color              : #153268;
+$warning-color              : #153268;
+
+$border-radius              : 4px;
+$box-shadow                 : none;
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+:root {
+  --palette-main                       : #ffffff;
+  --palette-secondary                  : #ffffff;
+  --palette-accent                     : #153268;
+  --global-base-color                  : #153268;
+  --global-bg-color                    : #ffffff;
+  --global-surface-color               : #ffffff;
+  --global-secondary-color             : #ffffff;
+  --global-accent-color                : #153268;
+  --global-accent-soft-color           : #ffffff;
+  --global-on-secondary-color          : #ffffff;
+  --global-heading-color               : #000000;
+  --global-muted-text-color            : #000000;
+  --global-footer-bg-color             : #ffffff;
+  --global-footer-text-color           : #000000;
+  --global-border-color                : #153268;
+  --global-dark-border-color           : #000000;
+  --global-code-background-color       : #ffffff;
+  --global-code-text-color             : #000000;
+  --global-fig-caption-color           : #000000;
+  --global-link-color                  : #000000;
+  --global-link-color-hover            : #153268;
+  --global-link-color-visited          : #000000;
+  --global-masthead-link-color         : #000000;
+  --global-masthead-link-color-hover   : #000000;
+  --global-text-color                  : #000000;
+  --global-text-color-light            : #000000;
+  --global-thead-color                 : #ffffff;
+}

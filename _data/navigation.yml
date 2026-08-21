@@ -1,0 +1,19 @@
+main:
+  - title: "Research"
+    url: /research/
+  - title: "People"
+    children:
+      - title: "My Group"
+        url: /group/
+      - title: "Collaborations"
+        url: /collaborations/
+  - title: "Join Us"
+    url: /openpositions/
+  - title: "Events"
+    url: /events/
+  - title: "News & Outreach"
+    url: /news-outreach/
+  - title: "CV"
+    url: /cv/
+  - title: "Contact"
+    url: /contact/
