@@ -1,0 +1,152 @@
+specific_positions:
+  - id: cidas-fellowship
+    title: "CIDAS Fellowship 2026/2027 (Data Science)"
+    level: "Early-career Postdoc"
+    posted: 2026-02-25
+    deadline: "April 5, 2026"
+    deadline_iso: 2026-04-05
+    status: closed
+    summary: >-
+      CIDAS supports outstanding early-career postdocs in developing an independent data-science research
+      project in collaboration with at least one CIDAS member.
+    details: |-
+      <p class="h6 fw-bold mb-2">Key points</p>
+      <ul class="mb-3">
+        <li><strong>Target group:</strong> early-career postdocs</li>
+        <li><strong>Project:</strong> independent data-science project; collaboration with ≥1 CIDAS member required</li>
+        <li><strong>Funding:</strong> up to €85,000; possible extension by up to one year (see call)</li>
+        <li><strong>Apply:</strong> e-mail to <a href="mailto:cidas@uni-goettingen.de">cidas@uni-goettingen.de</a></li>
+      </ul>
+
+      <p class="h6 fw-bold mb-2">Required documents</p>
+      <ul class="mb-3">
+        <li>Research idea (max. 5 pages) incl. work plan and budget</li>
+        <li>CV</li>
+        <li>Recommendation letter (mentor must not be former PhD supervisor; incl. infrastructure commitment)</li>
+      </ul>
+
+      <p class="mb-0">
+        <a href="/files/Announcement_CIDAS_Fellowship_26_27_EN.pdf" target="_blank" rel="noopener">
+          Full announcement (PDF)
+        </a>
+      </p>
+
+  - id: casus-ecosystems
+    title: "PhD position: Resilience of water-limited ecosystems (CASUS–HZDR & MPI-DS)"
+    level: "PhD"
+    posted: 2025-10-10
+    deadline: "October 27, 2025"
+    deadline_iso: 2025-10-27
+    status: closed
+    details: |-
+      <p>
+        We are seeking an enthusiastic and talented PhD candidate to join a collaborative project between CASUS–HZDR (Görlitz, Germany) and the Max Planck Institute for Dynamics and Self-Organization (Göttingen, Germany), jointly supervised by Ricardo Martinez-Garcia and Viola Priesemann.
+      </p>
+      <p>
+        The project will investigate the resilience of water-limited ecosystems under global change scenarios. In particular, we aim to understand the relationships between spatial self-organization and ecosystem resilience, both in simulated and remote-sensing data, and using a combination of pattern-formation theory, functional network analysis, and Bayesian inference tools. The position is based primarily at CASUS (Görlitz), with regular research stays in Göttingen. The starting date is flexible, but should be as soon as possible.
+      </p>
+      <p>
+        More information and application link:
+        <a href="https://www.hzdr.de/db/Cms?pNid=490&amp;pLang=en&amp;pOid=75779" target="_blank" rel="noopener">
+          hzdr.de/db/Cms?pOid=75779
+        </a>
+      </p>
+      <p>
+        The Helmholtz-Zentrum Dresden–Rossendorf and the Max Planck Society are committed to increasing the participation of individuals with disabilities and therefore encourage applications from qualified candidates. They also seek to increase the representation of women in underrepresented research areas and explicitly encourage women to apply.
+      </p>
+
+  - id: fellow-meg
+    title: "Postdoctoral Fellow: MEG and Cognition of Interaction"
+    level: "Postdoc"
+    posted: 2025-09-30
+    deadline: "November 23, 2025"
+    deadline_iso: 2025-11-23
+    status: closed
+    summary: >-
+      We are seeking a highly motivated and talented Postdoctoral Researcher to develop and implement
+      a cutting-edge dyadic interaction platform allowing for OPM-MEG recordings in pairs of interacting
+      human subjects.
+    details: |-
+      <p class="h6 fw-bold mb-2">Research Focus</p>
+      <p class="mb-2">
+        You will have the exciting opportunity to establish neural recordings in pairs of freely interacting human subjects, pushing the boundaries of our knowledge in this field. Our unique laboratory setting, featuring two synchronized OPM-MEG devices with high channel counts and a tailor-made magnetically shielded room with ultra-low residual magnetic fields, provides an ideal environment for innovative research.
+      </p>
+      <p>
+        This opportunity presents a collaboration with Prof. Michael Wibral, and with our Collaborative Research Centre (CRC) 1528 “Cognition of Interaction” where you will have the chance to explore novel dyadic games unfolding in continuous time with full mutual visibility and advance our understanding of the neural basis of human interaction.
+      </p>
+
+      <p class="h6 fw-bold mt-4 mb-2">Your Profile</p>
+      <p class="mb-2">
+        We are looking for a Postdoctoral Researcher with a PhD in Physics, Engineering, Neuroscience or a related field, complemented by strong communication and programming skills and a passion for collaborative research in neuroscience.
+      </p>
+      <p class="mb-2">
+        Prior experience with EEG or MEG, particularly OPM-MEG, and a background in designing and organizing studies in neuroscience are desirable. Additionally, knowledge in optics, electronics, or mechanical design would be a plus.
+      </p>
+
+      <p>
+        We encourage interested applicants from all backgrounds and genders to contact us.
+      </p>
+      <p>
+        Link: <a href="https://www.mpg.de/25532084/postdoctoral-fellow-meg-and-cognition-of-interaction" target="_blank" rel="noopener">mpg.de/25532084/postdoctoral-fellow-meg-and-cognition-of-interaction</a>
+      </p>
+
+  - id: complexity-societal-dynamics
+    title: "Two Fellow or PostDoc positions: Complexity, Information, and Societal Dynamics"
+    level: "Fellow / Postdoc"
+    posted: 2025-09-23
+    deadline: "November 11, 2025"
+    deadline_iso: 2025-11-11
+    status: closed
+    details: |-
+      <p>
+        To study the self-regulation of social networks and the spread of (mis)information, we curated a large social-media data set (Telegram), which allows novel insights into the spread of information and misinformation. Complementarily, we make use of the outbreak of COVID-19, which posed a major challenge to societies and individuals – but also provided research with an extremely rich behavioral and epidemiological data set to study collective human behavior.  If you want to join our team as PostDoc, or independent Fellow to develop your own research profile in our group with your own students, let us know. We can offer a long research perspective (3+3 years), a vibrant team, and highly motivated students.
+      </p>
+
+  - id: curiosity
+    title: "PhD position: Computational Neuroscience of “Curiosity”"
+    level: "PhD"
+    posted: 2025-09-22
+    deadline: "Jan/Feb, 2026"
+    status: closed
+    details: |-
+      <p>
+        Across eleven projects, scientists in the second cohort of the RTG 2906 will investigate the neuropsychological, biological, and computational underpinnings of curiosity. The network comprises a highly interdisciplinary consortium of psychologists, biologists as well as systems and computational neuroscientists who will work together to answer three broad research questions: (A) When are we curious? (B) Why are we curious? and (C) How are we curious? Please note that we do not advertise all the positions simultaneously, so please consult the webpage below frequently.
+      </p>
+      <p>
+        Link: <a href="https://www.uni-goettingen.de/de/open+positions/681638.html" target="_blank" rel="noopener">uni-goettingen.de/de/open+positions/681638.html</a>
+      </p>
+
+recurring_programs:
+  - id: mp-aix
+    title: "Max Planck Artificial Intelligence Network (MP-AIX)"
+    audience: "PhD"
+    icon: cpu
+    application_window: "October 1–31 each year"
+    description: >-
+      MP-AIX connects artificial intelligence and machine learning with scientific application areas
+      across the Max Planck Society. Doctoral researchers work with two advisors at different institutes
+      and spend time at both sites.
+    url: "https://ai.mpg.de/how-to-join-phd"
+    link_label: "Explore MP-AIX"
+
+  - id: matter-to-life
+    title: "Integrated Master’s/ PhD Program in Matter to Life"
+    audience: "Integrated Master’s / PhD"
+    icon: bounding-box-circles
+    application_window: "September 1–December 1 each year"
+    description: >-
+      We are looking for students who are genuinely interested in an interdisciplinary education,
+      spanning topics in physics, chemistry, and biology.
+    url: "https://mattertolife.maxplanckschools.org/application"
+    link_label: "Explore Matter to Life"
+
+  - id: goettingen-neurosciences
+    title: "Annual PhD positions: Experimental and Computational Neuroscience"
+    audience: "MSc / PhD / MD-PhD"
+    icon: diagram-3
+    application_window: "September 15–January 15 each year"
+    description: >-
+      Each year, the Göttingen Campus opens several PhD positions in experimental and computational neuroscience.
+      Please consider applying before (about) <strong>15 January</strong> each year.
+    url: "https://www.uni-goettingen.de/en/665828.html"
+    link_label: "Explore Neurosciences"

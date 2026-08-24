@@ -1,0 +1,30 @@
+<article class="card join-program-card h-100" aria-labelledby="join-program-{{ include.program.id }}">
+  <div class="card-body">
+    <div class="join-program-card__heading">
+      <span class="join-program-card__icon" aria-hidden="true">
+        <i class="bi bi-{{ include.program.icon }}"></i>
+      </span>
+      <span class="join-card__eyebrow">{{ include.program.audience | escape }}</span>
+    </div>
+
+    <h3 id="join-program-{{ include.program.id }}">{{ include.program.title | escape }}</h3>
+    <p>{{ include.program.description }}</p>
+
+    <div class="join-program-card__window">
+      <i class="bi bi-calendar-event" aria-hidden="true"></i>
+      <span>
+        <strong>Annual application window</strong>
+        {{ include.program.application_window | escape }}
+      </span>
+    </div>
+
+    <a
+      class="join-card__link"
+      href="{{ include.program.url | escape }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {{ include.program.link_label | escape }} <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</article>

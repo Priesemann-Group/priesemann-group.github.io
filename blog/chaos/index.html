@@ -29,8 +29,6 @@
     <!--
     <link rel="icon" href="./img/viola_32x32.png" type="image/png">
   -->
-    <!-- load content dynamically script-->
-    <!-- <script src="../../assets/js/loadcontent.js"></script> -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="../../assets/js/plotting.js"></script>
     <!-- Bootstrap-->
@@ -1414,9 +1412,6 @@
 
         function onHashChange(e) {
             current_active = getCurrentPage();
-            if (typeof loadcontent === "function") {
-                loadcontent(current_active);
-            }
             allLinks.forEach(link => {
                 const li = document.querySelector(`#navlink_${link}`)?.parentElement;
                 if (li) li.classList.toggle("active", link === current_active);

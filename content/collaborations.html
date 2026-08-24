@@ -2,55 +2,18 @@
 permalink: /collaborations/
 ---
 
-<!-- Identity of page-->
 <div class="row identity bg-light text-dark">
-	<h1 class="col col col-xl-10 col-md-12 align-self-center">Selected collaborations</h1>
+  <h1 class="col col-xl-10 col-md-12 align-self-center">Selected collaborations</h1>
+  <p class="col col-xl-10 col-md-12 align-self-center">
+    Our collaborations bring together complementary perspectives and expertise
+    to address questions that benefit from crossing disciplinary boundaries.
+  </p>
 </div>
-  
-<div class="content col col col-xl-10 col-md-12 align-self-center bg">
-  <!-- Neural Networks -->
-  <div class="card bg-light text-dark">
-    <div class="card-body">
-      <h2 class="card-title">Selected Collaborations and Colleagues (Neural Networks)</h2>
-      <div class="card-text">
-        <ul>
-          <li>Nicholas Dotson, Salk Institute, USA</li>
-          <li>Charles Gray, Montana, USA</li>
-          <li>Anna Levina, Tübingen, Germany</li>
-          <li>Joseph T. Lizier, Sydney, Australia</li>
-          <li>Florian Mormann, Bonn, Germany</li>
-          <li>Miguel Munoz, Granada, Spain</li>
-          <li>Andreas Neef, Göttingen, Germany</li>
-          <li>Oren Shriki, Ben Gurion University, Israel</li>
-          <li>Adam Packer, Oxford, UK</li>
-          <li>Silvio Rizzoli, Göttingen, Germany</li>
-          <li>Marion Silies, Mainz, Germany</li>
-          <li>Jordi Soriano, Barcelona, Spain</li>
-          <li>Raul Vicente, Tartu, Estonia</li>
-          <li>Michael Wibral, Göttingen, Germany</li>
-          <li>Hideaki Yamamoto, Tohoku University, Sendai, Japan</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <!-- Societal Dynamics -->
-  <div class="card bg-light text-dark">
-    <div class="card-body">
-      <h2 class="card-title">Selected Collaborations and Colleagues (Societal Dynamics)</h2>
-      <div class="card-text">
-        <ul>
-          <li>Eckart Bueren, University of Göttingen, Germany</li>
-          <li>David Garcia, University of Konstanz, Germany</li>
-          <li>Simon Gerdemann, Berlin, Germany</li>
-          <li>Mirjam Kretzschmar, University Medical Center Utrecht, The Netherlands</li>
-          <li>Tyll Krueger, Wrozlaw University, Poland</li>
-          <li>Jana Lasser, University of Graz, Austria</li>
-          <li>Michael Maes, Karlsruhe Institut für Technologie, Germany</li>
-          <li>Kai Nagel, Technische Universität Berlin, Germany</li>
-          <li>André Calero Valdez, Universität zu Lübeck, Germany</li>
-        </ul>
-      </div>
-    </div>
+<div class="content collaborations-overview col col-xl-10 col-md-12 align-self-center">
+  <div class="collaborations-grid">
+    {% for area in site.data.collaborations.areas %}
+      {% include collaboration-category.html area=area %}
+    {% endfor %}
   </div>
 </div>

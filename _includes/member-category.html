@@ -1,0 +1,50 @@
+<section
+  class="card member-category{% if include.category.id == 'alumni' %} member-category--alumni{% endif %}"
+  aria-labelledby="member-category-{{ include.category.id }}"
+>
+  <div class="card-body">
+    <button
+      class="member-category__toggle collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapse-members-{{ include.category.id }}"
+      aria-expanded="false"
+      aria-controls="collapse-members-{{ include.category.id }}"
+    >
+      <span class="member-category__heading">
+        <span class="member-category__icon" aria-hidden="true">
+          <i class="bi bi-{{ include.category.icon }}"></i>
+        </span>
+        <span>
+          <span class="card-title" id="member-category-{{ include.category.id }}">{{ include.category.title | escape }}</span>
+          <span class="member-category__count">
+            {{ include.category.members.size }} {% if include.category.members.size == 1 %}person{% else %}people{% endif %}
+          </span>
+        </span>
+      </span>
+      <span class="member-category__action" aria-hidden="true">
+        <span class="member-category__action-label">View names</span>
+        <i class="collapse-icon bi bi-chevron-down"></i>
+      </span>
+    </button>
+
+    <div class="collapse" id="collapse-members-{{ include.category.id }}">
+      <div class="member-category__directory">
+        <ul class="member-list">
+          {% for member in include.category.members %}
+            <li>
+              {% if member.url %}
+                <a href="{{ member.url | escape }}" target="_blank" rel="noopener noreferrer">
+                  <span>{{ member.name | escape }}</span>
+                  <span class="member-list__external" aria-hidden="true">↗</span>
+                </a>
+              {% else %}
+                <span>{{ member.name | escape }}</span>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

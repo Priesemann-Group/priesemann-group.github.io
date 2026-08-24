@@ -1,0 +1,53 @@
+<article
+  class="card join-position-card join-position-card--{{ include.position.status }}"
+  aria-labelledby="join-position-{{ include.position.id }}"
+>
+  <div class="card-body">
+    <button
+      class="join-position-card__toggle collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#details-join-position-{{ include.position.id }}"
+      aria-expanded="false"
+      aria-controls="details-join-position-{{ include.position.id }}"
+    >
+      <span class="join-position-card__main">
+        <span class="join-card__eyebrow">{{ include.position.level | escape }}</span>
+        <span class="join-card__title" id="join-position-{{ include.position.id }}">
+          {{ include.position.title | escape }}
+        </span>
+        {% if include.position.summary %}
+          <span class="join-card__summary">{{ include.position.summary }}</span>
+        {% endif %}
+        <span class="join-card__meta">
+          <span class="join-meta-tag">
+            Posted <time datetime="{{ include.position.posted | date: '%Y-%m-%d' }}">{{ include.position.posted | date: "%B %-d, %Y" }}</time>
+          </span>
+          <span class="join-meta-tag">
+            Deadline
+            {% if include.position.deadline_iso %}
+              <time datetime="{{ include.position.deadline_iso | date: '%Y-%m-%d' }}">{{ include.position.deadline }}</time>
+            {% else %}
+              {{ include.position.deadline }}
+            {% endif %}
+          </span>
+          {% if include.position.status == "closed" %}
+            <span class="join-meta-tag join-meta-tag--status">Closed</span>
+          {% endif %}
+        </span>
+      </span>
+      <span class="join-card__action" aria-hidden="true">
+        <span>View details</span>
+        <span class="join-card__toggle-icon">
+          <i class="collapse-icon bi bi-chevron-down"></i>
+        </span>
+      </span>
+    </button>
+
+    <div class="collapse" id="details-join-position-{{ include.position.id }}">
+      <div class="join-position-card__details">
+        {{ include.position.details }}
+      </div>
+    </div>
+  </div>
+</article>

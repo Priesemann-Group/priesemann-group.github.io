@@ -2,6 +2,10 @@
 permalink: /openpositions/
 ---
 
+{% assign positions_by_date = site.data.join_us.specific_positions | sort: "posted" | reverse %}
+{% assign open_positions = positions_by_date | where: "status", "open" %}
+{% assign closed_positions = positions_by_date | where: "status", "closed" %}
+
 <!-- Identity of page-->
 <div class="row identity bg-light text-dark">
   <h1 class="col col-xl-10 col-md-12 align-self-center">Join Us</h1>
@@ -10,335 +14,180 @@ permalink: /openpositions/
   </p>
 </div>
 
-<div class="content col col-xl-10 col-md-12 align-self-center">
+<div class="content join-us-overview col col-xl-10 col-md-12 align-self-center">
+  <section class="join-section" aria-labelledby="specific-positions-title">
+    <header class="join-section__header">
+      <div>
+        <span class="join-section__eyebrow">Opportunities in the group</span>
+        <h2 id="specific-positions-title">Specific open positions</h2>
+        <p>Calls and PhD programs with topic-specific details and external deadlines.</p>
+      </div>
+      <span class="join-section__count">
+        {{ open_positions.size }} {% if open_positions.size == 1 %}opening{% else %}openings{% endif %}
+      </span>
+    </header>
 
-  <!-- Open positions fellows -->
-  <div class="card bg-light text-dark">
-    <div class="card-body">
-      <a
-        class="collapsed"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapse-open-overview"
-        aria-expanded="false"
-        aria-controls="collapse-open-overview"
-      >
-        <h2 class="card-title d-flex align-items-center justify-content-between flex-wrap">
-        <span>
-          Two Fellow or PostDoc positions: Complexity, Information, and Societal Dynamics
-          <span class="badge bg-secondary ms-2 align-middle" style="font-size:0.95rem">
-            Deadline: November 11, 2025
+    {% if open_positions.size > 0 %}
+      <div class="join-position-list">
+        {% for position in open_positions %}
+          {% include join-position-card.html position=position %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="card join-empty-state">
+        <div class="card-body">
+          <span class="join-empty-state__icon" aria-hidden="true">
+            <i class="bi bi-briefcase"></i>
           </span>
-        </span>
-        <div class="collapse-icon bi bi-chevron-down"></div>
-        </h2>
-
-      </a>
-      <div class="card-text collapse" id="collapse-open-overview">
-        <div class="pt-2">
-          <hr />
-          <p>
-            To study the self-regulation of social networks and the spread of (mis)information, we curated a large social-media data set (Telegram), which allows novel insights into the spread of information and misinformation. Complementarily, we make use of the outbreak of COVID-19, which posed a major challenge to societies and individuals – but also provided research with an extremely rich behavioral and epidemiological data set to study collective human behavior.  If you want to join our team as PostDoc, or independent Fellow to develop your own research profile in our group with your own students, let us know. We can offer a long research perspective (3+3 years), a vibrant team, and highly motivated students.
-          </p>
+          <div>
+            <h3>No specific positions currently advertised</h3>
+            <p>
+              New calls will appear here. In the meantime, researchers and students whose interests align
+              with our work are welcome to use the general application route below.
+            </p>
+          </div>
+          <a class="join-card__link" href="{{ page.url }}#general-applications">General applications</a>
         </div>
       </div>
-    </div>
-  </div>
+    {% endif %}
+  </section>
 
-<!-- Postdoctoral Fellow: MEG and Cognition of Interaction -->
-  <div class="card bg-light text-dark">
-    <div class="card-body">
-      <a
-        class="collapsed"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapse-fellow-meg"
-        aria-expanded="false"
-        aria-controls="collapse-fellow-meg"
-      >
-        <h2 class="card-title d-flex align-items-center justify-content-between flex-wrap">
-          <span>
-            Postdoctoral Fellow: MEG and Cognition of Interaction
-            <span class="badge bg-secondary ms-2 align-middle" style="font-size:0.95rem">
-              Deadline: November 23, 2025
-            </span>
-          </span>
-          <div class="collapse-icon bi bi-chevron-down"></div>
-        </h2>
-        <p class="card-text text-dark">
-          We are seeking a highly motivated and talented Postdoctoral Researcher to develop and implement 
-          a cutting-edge dyadic interaction platform allowing for OPM-MEG recordings in pairs of interacting 
-          human subjects.
+  <section class="join-section" aria-labelledby="recurring-programs-title">
+    <header class="join-section__header">
+      <div>
+        <span class="join-section__eyebrow">Plan ahead</span>
+        <h2 id="recurring-programs-title">Programs with recurring deadlines</h2>
+        <p>
+          Structured routes into interdisciplinary research in artificial intelligence, complex systems,
+          and neuroscience.
         </p>
-      </a>
-      <div class="card-text collapse" id="collapse-fellow-meg">
-        <div class="pt-2">
-          <hr />
-          <p class="h6 fw-bold mb-2">Research Focus</p>
-          <p class="mb-2">
-            You will have the exciting opportunity to establish neural recordings in pairs of freely 
-            interacting human subjects, pushing the boundaries of our knowledge in this field. 
-            Our unique laboratory setting, featuring two synchronized OPM-MEG devices with high channel 
-            counts and a tailor-made magnetically shielded room with ultra-low residual magnetic fields, 
-            provides an ideal environment for innovative research.
-          </p>
-          <p>
-            This opportunity presents a collaboration with Prof. Michael Wibral, and with our Collaborative 
-            Research Centre (CRC) 1528 “Cognition of Interaction” where you will have the chance to explore 
-            novel dyadic games unfolding in continuous time with full mutual visibility and advance our 
-            understanding of the neural basis of human interaction.
-          </p>
-
-          <p class="h6 fw-bold mt-4 mb-2">Your Profile</p>
-          <p class="mb-2">
-            We are looking for a Postdoctoral Researcher with a PhD in Physics, Engineering, Neuroscience 
-            or a related field, complemented by strong communication and programming skills and a passion 
-            for collaborative research in neuroscience.
-          </p>
-          <p class="mb-2">
-            Prior experience with EEG or MEG, particularly OPM-MEG, and a background in designing and 
-            organizing studies in neuroscience are desirable. Additionally, knowledge in optics, electronics, 
-            or mechanical design would be a plus.
-          </p>
-
-          <p>
-            We encourage interested applicants from all backgrounds and genders to contact us.
-          </p>
-          <p>
-              Link: <a href="https://www.mpg.de/25532084/postdoctoral-fellow-meg-and-cognition-of-interaction" target="_blank" rel="noopener">mpg.de/25532084/postdoctoral-fellow-meg-and-cognition-of-interaction</a>
-          </p>
-        </div>
       </div>
+    </header>
+
+    <div class="row g-3 join-program-grid">
+      {% for program in site.data.join_us.recurring_programs %}
+        <div class="col-12 col-md-6 col-xl-4">
+          {% include join-program-card.html program=program %}
+        </div>
+      {% endfor %}
     </div>
-  </div>
+  </section>
 
-  <!-- CIDAS Fellowship 2026/2027 -->
-  <div class="card bg-light text-dark">
-    <div class="card-body">
-      <a
-        class="collapsed"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapse-cidas-fellowship"
-        aria-expanded="false"
-        aria-controls="collapse-cidas-fellowship"
-      >
-        <h2 class="card-title d-flex align-items-center justify-content-between flex-wrap">
-          <span>
-            CIDAS Fellowship 2026/2027 (Data Science)
-            <span class="badge bg-secondary ms-2 align-middle" style="font-size:0.95rem">
-              Deadline: April 5, 2026
-            </span>
-          </span>
-          <div class="collapse-icon bi bi-chevron-down"></div>
-        </h2>
+  <section class="join-section" aria-labelledby="other-pathways-title">
+    <header class="join-section__header">
+      <div>
+        <span class="join-section__eyebrow">More ways to get started</span>
+        <h2 id="other-pathways-title">Study and apply in Göttingen</h2>
+        <p>Explore physics at university level or approach our group directly with your research interests.</p>
+      </div>
+    </header>
 
-        <p class="card-text text-dark">
-        CIDAS supports outstanding early-career postdocs in developing an independent data-science research
-        project in collaboration with at least one CIDAS member.
-      </p>
-      </a>
-
-      <div class="card-text collapse" id="collapse-cidas-fellowship">
-        <div class="pt-2">
-          <hr />
-
-          <p class="h6 fw-bold mb-2">Key points</p>
-          <ul class="mb-3">
-            <li><strong>Target group:</strong> early-career postdocs</li>
-            <li><strong>Project:</strong> independent data-science project; collaboration with ≥1 CIDAS member required</li>
-            <li><strong>Funding:</strong> up to €85,000; possible extension by up to one year (see call)</li>
-            <li><strong>Apply:</strong> e-mail to <a href="mailto:cidas@uni-goettingen.de">cidas@uni-goettingen.de</a></li>
-          </ul>
-
-          <p class="h6 fw-bold mb-2">Required documents</p>
-          <ul class="mb-3">
-            <li>Research idea (max. 5 pages) incl. work plan and budget</li>
-            <li>CV</li>
-            <li>Recommendation letter (mentor must not be former PhD supervisor; incl. infrastructure commitment)</li>
-          </ul>
-
-          <p class="mb-0">
-            <a href="files/Announcement_CIDAS_Fellowship_26_27_EN.pdf" target="_blank" rel="noopener">
-              Full announcement (PDF)
+    <div class="row g-3 join-pathways-grid">
+      <div class="col-12 col-xl-5">
+        <article class="card join-pathway-card h-100" aria-labelledby="physik-plus-title">
+          <div class="card-body">
+            <div class="join-program-card__heading">
+              <span class="join-program-card__icon" aria-hidden="true">
+                <i class="bi bi-lightbulb"></i>
+              </span>
+              <span class="join-card__eyebrow">Bachelor’s program</span>
+            </div>
+            <h3 id="physik-plus-title">Physik+ in Göttingen</h3>
+            <p>
+              The four-year Bachelor “Physik Interdisziplinär” combines a strong foundation in physics with
+              flexible interdisciplinary pathways such as artificial intelligence, philosophy, or sustainability.
+            </p>
+            <a
+              class="join-card__link"
+              href="https://physikgoettingen.magister.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Discover Physik+ <span aria-hidden="true">↗</span>
             </a>
-          </p>
-        </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-xl-7">
+        <article class="card join-application-card h-100" id="general-applications" aria-labelledby="general-applications-title">
+          <div class="card-body">
+            <span class="join-card__eyebrow">Bachelor / Master / PhD / PostDoc</span>
+            <h3 id="general-applications-title">Information for all applicants (Bachelor/Master/PhD/PostDoc)</h3>
+            <p>If our research topics resonate with your interest, please do not hesitate to send us your application.</p>
+            <p>
+              Please send a <em>single PDF</em> including: letter of motivation, CV, transcript of records, and namess of referees to
+              <a href="mailto:application.priesemann@ds.mpg.de">application.priesemannATds.mpg.de</a>.
+            </p>
+
+            <button
+              class="join-application-card__toggle collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#general-application-guidance"
+              aria-expanded="false"
+              aria-controls="general-application-guidance"
+            >
+              <span>Read the application guidance</span>
+              <i class="collapse-icon bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+
+            <div class="collapse" id="general-application-guidance">
+              <div class="join-application-card__details">
+                <p>
+                  Your <strong>motivation letter</strong> (1–2 pages) should summarize your past research achievements, skills, and interests, and include a short outline (~½ page) of “your research interest” — the topic you would like to pursue in our group (this not necessary for Bachelor and Master theses, but welcome). If you provide this, I will have a careful look at your application. The short outline does not need to be a final research proposal; it serves as basis for us to see the potential fit, and to discuss with you potential research projects in an interview.
+                </p>
+                <p>
+                  Please add a short statement to which degree you have been using “AI” to prepare your letter of motivation.
+                </p>
+                <p>
+                  We encourage applicants from all backgrounds and genders to contact us.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
-  </div>
+  </section>
 
+  {% if closed_positions.size > 0 %}
+    <section class="join-section join-archive" aria-labelledby="previous-calls-title">
+      <div class="card join-archive__card">
+        <div class="card-body">
+          <button
+            class="join-archive__toggle collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#previous-calls"
+            aria-expanded="false"
+            aria-controls="previous-calls"
+          >
+            <span>
+              <span class="join-card__eyebrow">Archive</span>
+              <span class="join-archive__title" id="previous-calls-title">Previous calls</span>
+            </span>
+            <span class="join-card__action" aria-hidden="true">
+              <span>View archive</span>
+              <span class="join-card__toggle-icon">
+                <i class="collapse-icon bi bi-chevron-down"></i>
+              </span>
+            </span>
+          </button>
 
-  <!-- Specific open positions -->
-  <div class="card bg-light text-dark">
-    <div class="card-body">
-      <a
-        class="collapsed"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapse-specific"
-        aria-expanded="false"
-        aria-controls="collapse-specific"
-      >
-        <h2 class="card-title">
-          Specific open positions
-          <div class="collapse-icon bi bi-chevron-down"></div>
-        </h2>
-        <p class="card-text text-dark">
-          Calls and PhD programs with topic-specific details and external deadlines.
-        </p>
-      </a>
-
-      <div class="card-text collapse" id="collapse-specific">
-
-        <hr />
-        <!-- CASUS–HZDR & MPI-DS PhD: Resilience of water-limited ecosystems -->
-        <a
-          class="collapsed"
-          data-bs-toggle="collapse"
-          data-bs-target="#pos-casus-ecosystems"
-          aria-expanded="false"
-          aria-controls="pos-casus-ecosystems"
-        >
-          <h3 class="mt-3" style="font-size:1.25rem;">
-            PhD position: Resilience of water-limited ecosystems (CASUS–HZDR & MPI-DS)
-            <span class="badge bg-secondary ms-2">Deadline: October 27, 2025</span>
-            <div class="collapse-icon bi bi-chevron-down"></div>
-          </h3>
-        </a>
-        <div class="collapse" id="pos-casus-ecosystems">
-          <div class="pt-2">
-            <p>
-              We are seeking an enthusiastic and talented PhD candidate to join a collaborative project between CASUS–HZDR (Görlitz, Germany) and the Max Planck Institute for Dynamics and Self-Organization (Göttingen, Germany), jointly supervised by Ricardo Martinez-Garcia and Viola Priesemann.
-            </p>
-            <p>  
-              The project will investigate the resilience of water-limited ecosystems under global change scenarios. In particular, we aim to understand the relationships between spatial self-organization and ecosystem resilience, both in simulated and remote-sensing data, and using a combination of pattern-formation theory, functional network analysis, and Bayesian inference tools. The position is based primarily at CASUS (Görlitz), with regular research stays in Göttingen. The starting date is flexible, but should be as soon as possible.            </p>
-            <p>
-              More information and application link: 
-              <a href="https://www.hzdr.de/db/Cms?pNid=490&pLang=en&pOid=75779" target="_blank" rel="noopener">
-                hzdr.de/db/Cms?pOid=75779
-              </a>
-            </p>
-            <p>
-              The Helmholtz-Zentrum Dresden–Rossendorf and the Max Planck Society are committed to increasing the participation of individuals with disabilities and therefore encourage applications from qualified candidates. They also seek to increase the representation of women in underrepresented research areas and explicitly encourage women to apply.
-            </p>
+          <div class="collapse" id="previous-calls">
+            <div class="join-archive__content">
+              <div class="row g-3">
+                {% for position in closed_positions %}
+                  <div class="col-12">
+                    {% include join-position-card.html position=position %}
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
           </div>
         </div>
-
-        <hr />
-        <!-- Matter to Life PhD call -->
-        <a
-          class="collapsed"
-          data-bs-toggle="collapse"
-          data-bs-target="#pos-matter-to-life"
-          aria-expanded="false"
-          aria-controls="pos-matter-to-life"
-        >
-          <h3 class="mt-3" style="font-size:1.25rem;">
-            Integrated Master’s/ PhD Program in Matter to Life
-            <span class="badge bg-secondary ms-2" >Deadline: December 1 (yearly)</span>
-            <div class="collapse-icon bi bi-chevron-down"></div>
-          </h3>
-        </a>
-        <div class="collapse" id="pos-matter-to-life">
-          <div class="pt-2">
-            <p>
-              We are looking for students who are genuinely interested in an interdisciplinary education, spanning topics in physics, chemistry, and biology.
-            </p>
-            <p>
-              Link: <a href="https://mattertolife.maxplanckschools.org/application" target="_blank" rel="noopener">mattertolife.maxplanckschools.org/application</a>
-            </p>
-          </div>
-        </div>
-
-        <hr />
-        <!-- Göttingen Campus annual PhD call -->
-        <a
-          class="collapsed"
-          data-bs-toggle="collapse"
-          data-bs-target="#pos-goe-campus"
-          aria-expanded="false"
-          aria-controls="pos-goe-campus"
-        >
-          <h3 class="mt-3" style="font-size:1.25rem;">
-            Annual PhD positions: Experimental and Computational Neuroscience
-            <span class="badge bg-secondary ms-2" >Deadline: January 15, 2026</span>
-            <div class="collapse-icon bi bi-chevron-down"></div>
-          </h3>
-        </a>
-        <div class="collapse" id="pos-goe-campus">
-          <div class="pt-2">
-            <p>
-              Each year, the Göttingen Campus opens several PhD positions in experimental and computational neuroscience.
-              Please consider applying before (about) <strong>15 January</strong> each year.
-            </p>
-            <p>
-              Link: <a href="https://www.uni-goettingen.de/en/665828.html" target="_blank" rel="noopener">uni-goettingen.de/en/665828.html</a>
-            </p>
-          </div>
-        </div>
-
-        <hr />
-        <!-- Curiosity -->
-        <a
-          class="collapsed"
-          data-bs-toggle="collapse"
-          data-bs-target="#pos-curiosity"
-          aria-expanded="false"
-          aria-controls="pos-curiosity"
-        >
-          <h3 class="mt-3" style="font-size:1.25rem;">
-            PhD position: Computational Neuroscience of “Curiosity”
-            <span class="badge bg-secondary ms-2">Deadline: Jan/Feb, 2026</span>
-            <div class="collapse-icon bi bi-chevron-down"></div>
-          </h3>
-        </a>
-        <div class="collapse" id="pos-curiosity">
-          <div class="pt-2">
-            <p>
-            Across eleven projects, scientists in the second cohort of the RTG 2906 will investigate the neuropsychological, biological, and computational underpinnings of curiosity. The network comprises a highly interdisciplinary consortium of psychologists, biologists as well as systems and computational neuroscientists who will work together to answer three broad research questions: (A) When are we curious? (B) Why are we curious? and (C) How are we curious? Please note that we do not advertise all the positions simultaneously, so please consult the webpage below frequently. 
-            </p>
-            <p>
-              Link: <a href="https://www.uni-goettingen.de/de/open+positions/681638.html" target="_blank" rel="noopener">uni-goettingen.de/de/open+positions/681638.html</a>
-            </p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </div>
-  <!-- Application as bachelor, master, phd -->
-  <div class="card bg-light text-dark">
-    <div class="card-body">
-      <a
-        class="collapsed"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapse-application"
-        aria-expanded="false"
-        aria-controls="collapse-application"
-      >
-        <h2 class="card-title">
-          Information for all applicants (Bachelor/Master/PhD/PostDoc)
-          <div class="collapse-icon bi bi-chevron-down"></div>
-        </h2>
-        <p class="card-text text-dark">
-          If our research topics resonate with your interest, please do not hesitate to send us your application.
-        </p>
-      </a>
-      <div class="card-text collapse" id="collapse-application">
-        <hr />
-        <p>
-           Please send a <em>single PDF</em> including: letter of motivation, CV, transcript of records, and namess of referees to
-          <a href="mailto:application.priesemann@ds.mpg.de">application.priesemannATds.mpg.de</a>.
-        </p>
-        <p>
-          Your <strong>motivation letter</strong> (1–2 pages) should summarize your past research achievements, skills, and interests, and include a short outline (~½ page) of “your research interest” — the topic you would like to pursue in our group (this not necessary for Bachelor and Master theses, but welcome). If you provide this, I will have a careful look at your application. The short outline does not need to be a final research proposal; it serves as basis for us to see the potential fit, and to discuss with you potential research projects in an interview.
-        </p>
-        <p>
-          Please add a short statement to which degree you have been using “AI” to prepare your letter of motivation.
-        </p>
-        <p>
-          We encourage applicants from all backgrounds and genders to contact us.
-        </p>
-      </div>
-    </div>
-  </div>
-
-
+    </section>
+  {% endif %}
 </div>

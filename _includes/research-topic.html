@@ -1,0 +1,44 @@
+<section class="card research-category" aria-labelledby="research-topic-{{ include.topic.id }}">
+  <div class="card-body">
+    <button
+      class="research-category__toggle collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapse-research-{{ include.topic.id }}"
+      aria-expanded="false"
+      aria-controls="collapse-research-{{ include.topic.id }}"
+    >
+      <span class="card-title" id="research-topic-{{ include.topic.id }}">{{ include.topic.title }}</span>
+      <span class="card-text">{{ include.topic.description }}</span>
+      <span class="research-category__icon" aria-hidden="true">
+        <i class="collapse-icon bi bi-chevron-down"></i>
+      </span>
+    </button>
+
+    <div class="card-text collapse" id="collapse-research-{{ include.topic.id }}">
+      <div class="selected-publications">
+        <h3>Selected publications</h3>
+        <div class="selected-publications__list" id="selected-publications-{{ include.topic.id }}">
+          {% for publication_id in include.topic.publications %}
+            {% assign publication = site.data.selected_publications[publication_id] %}
+            {% include publication-card.html publication=publication id=publication_id topic_id=include.topic.id position=forloop.index %}
+          {% endfor %}
+
+          {% for publication_id in include.topic.publications %}
+            {% assign publication = site.data.selected_publications[publication_id] %}
+            <section
+              class="publication-abstract-panel publication-abstract-panel--{{ forloop.index }} collapse"
+              id="abstract-{{ include.topic.id }}-{{ publication_id }}"
+              aria-labelledby="abstract-toggle-{{ include.topic.id }}-{{ publication_id }}"
+              aria-hidden="true"
+              hidden
+            >
+              <h5>Full abstract</h5>
+              <p>{{ publication.abstract }}</p>
+            </section>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

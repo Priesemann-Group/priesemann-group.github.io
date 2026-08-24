@@ -1,0 +1,266 @@
+# Publication metadata is stored locally so the research page has no runtime
+# dependency on a bibliographic API. Each key is referenced from research.yml.
+
+dehning2020:
+  title: "Inferring change points in the spread of COVID-19 reveals the effectiveness of interventions"
+  authors: "Jonas Dehning, Johannes Zierenberg, F. Paul Spitzner, Michael Wibral, João Pinheiro Neto, Michael Wilczek, and Viola Priesemann"
+  journal: Science
+  year: 2020
+  doi: 10.1126/science.abb9789
+  abstract: >-
+    As coronavirus disease 2019 (COVID-19) is rapidly spreading across the globe,
+    short-term modeling forecasts provide time-critical information for decisions
+    on containment and mitigation strategies. A major challenge for short-term
+    forecasts is the assessment of key epidemiological parameters and how they
+    change when first interventions show an effect. By combining an established
+    epidemiological model with Bayesian inference, we analyzed the time dependence
+    of the effective growth rate of new infections. Focusing on COVID-19 spread in
+    Germany, we detected change points in the effective growth rate that correlate
+    well with the times of publicly announced interventions. Thereby, we could
+    quantify the effect of interventions and incorporate the corresponding change
+    points into forecasts of future scenarios and case numbers. Our code is freely
+    available and can be readily adapted to any country or region.
+
+neto2019:
+  title: "A unified picture of neuronal avalanches arises from the understanding of sampling effects"
+  authors: "João Pinheiro Neto, F. Paul Spitzner, and Viola Priesemann"
+  journal: bioRxiv
+  year: 2019
+  doi: 10.1101/759613
+  abstract: >-
+    To date, it is still impossible to sample the entire mammalian brain with
+    single-neuron precision. This forces one to either use spikes (focusing on few
+    neurons) or to use coarse-sampled activity (averaging over many neurons, e.g.
+    LFP). Naturally, the sampling technique impacts inference about collective
+    properties. Here, we emulate both sampling techniques on a spiking model to
+    quantify how they alter observed correlations and signatures of criticality.
+    We discover a general effect: when the inter-electrode distance is small,
+    electrodes sample overlapping regions in space, which increases the
+    correlation between the signals. For coarse-sampled activity, this can
+    produce power-law distributions even for non-critical systems. In contrast,
+    spikes enable one to distinguish the underlying dynamics. This explains why
+    coarse measures and spikes have produced contradicting results in the past—
+    that are now all consistent with a slightly subcritical regime.
+
+wilting2018:
+  title: "Inferring collective dynamical states from widely unobserved systems"
+  authors: "Jens Wilting and Viola Priesemann"
+  journal: Nature Communications
+  year: 2018
+  doi: 10.1038/s41467-018-04725-4
+  abstract: >-
+    When assessing spatially extended complex systems, one can rarely sample the
+    states of all components. We show that this spatial subsampling typically
+    leads to severe underestimation of the risk of instability in systems with
+    propagating events. We derive a subsampling-invariant estimator, and
+    demonstrate that it correctly infers the infectiousness of various diseases
+    under subsampling, making it particularly useful in countries with unreliable
+    case reports. In neuroscience, recordings are strongly limited by
+    subsampling. Here, the subsampling-invariant estimator allows to revisit two
+    prominent hypotheses about the brain’s collective spiking dynamics:
+    asynchronous-irregular or critical. We identify consistently for rat, cat,
+    and monkey a state that combines features of both and allows input to
+    reverberate in the network for hundreds of milliseconds. Overall, owing to
+    its ready applicability, the novel estimator paves the way to novel insight
+    for the study of spatially extended dynamical systems.
+
+cramer2020:
+  title: "Control of criticality and computation in spiking neuromorphic networks with plasticity"
+  authors: "Benjamin Cramer, David Stöckel, Markus Kreft, Michael Wibral, Johannes Schemmel, Karlheinz Meier, and Viola Priesemann"
+  journal: Nature Communications
+  year: 2020
+  doi: 10.1038/s41467-020-16548-3
+  abstract: >-
+    The critical state is assumed to be optimal for any computation in recurrent
+    neural networks, because criticality maximizes a number of abstract
+    computational properties. We challenge this assumption by evaluating the
+    performance of a spiking recurrent neural network on a set of tasks of
+    varying complexity at—and away from—critical network dynamics. To that end,
+    we developed a plastic spiking network on a neuromorphic chip. We show that
+    the distance to criticality can be easily adapted by changing the input
+    strength, and then demonstrate a clear relation between criticality,
+    task-performance and information-theoretic fingerprint. Whereas the
+    information-theoretic measures all show that network capacity is maximal at
+    criticality, only the complex tasks profit from criticality, whereas simple
+    tasks suffer. Thereby, we challenge the general assumption that criticality
+    would be beneficial for any task, and provide instead an understanding of how
+    the collective network state should be tuned to task requirement.
+
+wilting2019:
+  title: "Between perfectly critical and fully irregular: A reverberating model captures and predicts cortical spike propagation"
+  authors: "Jens Wilting and Viola Priesemann"
+  journal: Cerebral Cortex
+  year: 2019
+  doi: 10.1093/cercor/bhz049
+  abstract: >-
+    Knowledge about the collective dynamics of cortical spiking is very
+    informative about the underlying coding principles. However, even most basic
+    properties are not known with certainty, because their assessment is hampered
+    by spatial subsampling, i.e., the limitation that only a tiny fraction of all
+    neurons can be recorded simultaneously with millisecond precision. Building
+    on a novel, subsampling-invariant estimator, we fit and carefully validate a
+    minimal model for cortical spike propagation. The model interpolates between
+    two prominent states: asynchronous and critical. We find neither of them in
+    cortical spike recordings across various species, but instead identify a
+    narrow “reverberating” regime. This approach enables us to predict yet unknown
+    properties from very short recordings and for every circuit individually,
+    including responses to minimal perturbations, intrinsic network timescales,
+    and the strength of external input compared to recurrent activation, thereby
+    informing about the underlying coding principles for each circuit, area,
+    state and task.
+
+loidolt2020:
+  title: "Sequence memory in recurrent neuronal networks can develop without structured input"
+  authors: "Matthias Loidolt, Lucas Rudelt, and Viola Priesemann"
+  journal: bioRxiv
+  year: 2020
+  doi: 10.1101/2020.09.15.297580
+  abstract: >-
+    How does spontaneous activity during development prepare cortico-cortical
+    connections for sensory input? We here analyse the development of sequence
+    memory, an intrinsic feature of recurrent networks that supports temporal
+    perception. We use a recurrent neural network model with homeostatic and
+    spike-timing-dependent plasticity (STDP). This model has been shown to learn
+    specific sequences from structured input. We show that development even
+    under unstructured input increases unspecific sequence memory. Moreover,
+    networks “pre-shaped” by such unstructured input subsequently learn specific
+    sequences faster. The key structural substrate is the emergence of strong
+    and directed synapses due to STDP and synaptic competition. These construct
+    self-amplifying preferential paths of activity, which can quickly encode new
+    input sequences. Our results suggest that memory traces are not printed on a
+    tabula rasa, but instead harness building blocks already present in the brain.
+
+mikulasch2021:
+  title: "Local dendritic balance enables learning of efficient representations in networks of spiking neurons"
+  authors: "Fabian A. Mikulasch, Lucas Rudelt, and Viola Priesemann"
+  journal: PNAS
+  year: 2021
+  doi: 10.1073/pnas.2021925118
+  abstract: >-
+    How can neural networks learn to efficiently represent complex and
+    high-dimensional inputs via local plasticity mechanisms? Classical models of
+    representation learning assume that feedforward weights are learned via
+    pairwise Hebbian-like plasticity. Here, we show that pairwise Hebbian-like
+    plasticity works only under unrealistic requirements on neural dynamics and
+    input statistics. To overcome these limitations, we derive from first
+    principles a learning scheme based on voltage-dependent synaptic plasticity
+    rules. Here, recurrent connections learn to locally balance feedforward input
+    in individual dendritic compartments and thereby can modulate synaptic
+    plasticity to learn efficient representations. We demonstrate in simulations
+    that this learning scheme works robustly even for complex high-dimensional
+    inputs and with inhibitory transmission delays, where Hebbian-like plasticity
+    fails. Our results draw a direct connection between dendritic
+    excitatory–inhibitory balance and voltage-dependent synaptic plasticity as
+    observed in vivo and suggest that both are crucial for representation
+    learning.
+
+wibral2015:
+  title: "Bits from brains for biologically inspired computing"
+  authors: "Michael Wibral, Joseph T. Lizier, and Viola Priesemann"
+  journal: Frontiers in Robotics and AI
+  year: 2015
+  doi: 10.3389/frobt.2015.00005
+  abstract: >-
+    Computational intelligence is broadly defined as biologically-inspired
+    computing. Usually, inspiration is drawn from neural systems. This article
+    shows how to analyze neural systems using information theory to obtain
+    constraints that help identify the algorithms run by such systems and the
+    information they represent. Algorithms and representations identified
+    information-theoretically may then guide the design of biologically inspired
+    computing systems (BICS). The material covered includes the necessary
+    introduction to information theory and the estimation of information
+    theoretic quantities from neural data. We then show how to analyze the
+    information encoded in a system about its environment, and also discuss
+    recent methodological developments on the question of how much information
+    each agent carries about the environment either uniquely, or redundantly or
+    synergistically together with others. Last, we introduce the framework of
+    local information dynamics, where information processing is decomposed into
+    component processes of information storage, transfer, and modification—
+    locally in space and time. We close by discussing example applications of
+    these measures to neural data and other complex systems.
+
+donges2022:
+  title: "Interplay between risk perception, behavior, and COVID-19 spread"
+  authors: "Philipp Dönges, Joel Wagner, Sebastian Contreras, Emil N. Iftekhar, Simon Bauer, Sebastian B. Mohr, Jonas Dehning, André Calero Valdez, Mirjam Kretzschmar, Michael Mäs, Kai Nagel, and Viola Priesemann"
+  journal: Frontiers in Physics
+  year: 2022
+  doi: 10.3389/fphy.2022.842180
+  abstract: >-
+    Pharmaceutical and non-pharmaceutical interventions (NPIs) have been crucial
+    for controlling COVID-19. They are complemented by voluntary
+    health-protective behavior, building a complex interplay between risk
+    perception, behavior, and disease spread. We studied how voluntary
+    health-protective behavior and vaccination willingness impact the long-term
+    dynamics. We analyzed how different levels of mandatory NPIs determine how
+    individuals use their leeway for voluntary actions. If mandatory NPIs are too
+    weak, COVID-19 incidence will surge, implying high morbidity and mortality
+    before individuals react; if they are too strong, one expects a rebound wave
+    once restrictions are lifted, challenging the transition to endemicity.
+    Conversely, moderate mandatory NPIs give individuals time and room to adapt
+    their level of caution, mitigating disease spread effectively. When
+    complemented with high vaccination rates, this also offers a robust way to
+    limit the impacts of the Omicron variant of concern. Altogether, our work
+    highlights the importance of appropriate mandatory NPIs to maximise the
+    impact of individual voluntary actions in pandemic control.
+
+bauer2021:
+  title: "Relaxing restrictions at the pace of vaccination increases freedom and guards against further COVID-19 waves"
+  authors: "Simon Bauer, Sebastian Contreras, Jonas Dehning, Matthias Linden, Emil N. Iftekhar, Sebastian B. Mohr, Álvaro Olivera-Nappa, and Viola Priesemann"
+  journal: PLOS Computational Biology
+  year: 2021
+  doi: 10.1371/journal.pcbi.1009288
+  abstract: >-
+    Mass vaccination offers a promising exit strategy for the COVID-19 pandemic.
+    However, as vaccination progresses, demands to lift restrictions increase,
+    despite most of the population remaining susceptible. Using our
+    age-stratified SEIRD-ICU compartmental model and curated epidemiological and
+    vaccination data, we quantified the rate (relative to vaccination progress)
+    at which countries can lift non-pharmaceutical interventions without
+    overwhelming their healthcare systems. We analyzed scenarios ranging from
+    immediately lifting restrictions (accepting high mortality and morbidity) to
+    reducing case numbers to a level where test-trace-and-isolate (TTI) programs
+    efficiently compensate for local spreading events. In general, the
+    age-dependent vaccination roll-out implies a transient decrease of more than
+    ten years in the average age of ICU patients and deceased. The pace of
+    vaccination determines the speed of lifting restrictions; taking the
+    European Union (EU) as an example case, all considered scenarios allow for
+    steadily increasing contacts starting in May 2021 and relaxing most
+    restrictions by autumn 2021. Throughout summer 2021, only mild contact
+    restrictions will remain necessary. However, only high vaccine uptake can
+    prevent further severe waves. Across EU countries, seroprevalence impacts the
+    long-term success of vaccination campaigns more strongly than age
+    demographics. In addition, we highlight the need for preventive measures to
+    reduce contagion in school settings throughout the year 2021, where children
+    might be drivers of contagion because of them remaining susceptible.
+    Strategies that maintain low case numbers, instead of high ones, reduce
+    infections and deaths by factors of eleven and five, respectively. In
+    general, policies with low case numbers significantly benefit from
+    vaccination, as the overall reduction in susceptibility will further
+    diminish viral spread. Keeping case numbers low is the safest long-term
+    strategy because it considerably reduces mortality and morbidity and offers
+    better preparedness against emerging escape or more contagious virus variants
+    while still allowing for higher contact numbers (freedom) with progressing
+    vaccinations.
+
+contreras2021:
+  title: "The challenges of containing SARS-CoV-2 via test-trace-and-isolate"
+  authors: "Sebastian Contreras, Jonas Dehning, Matthias Loidolt, Johannes Zierenberg, F. Paul Spitzner, Jorge H. Urrea-Quintero, Sebastian B. Mohr, Michael Wilczek, Michael Wibral, and Viola Priesemann"
+  journal: Nature Communications
+  year: 2021
+  doi: 10.1038/s41467-020-20699-8
+  abstract: >-
+    Without a cure, vaccine, or proven long-term immunity against SARS-CoV-2,
+    test-trace-and-isolate (TTI) strategies present a promising tool to contain
+    its spread. For any TTI strategy, however, mitigation is challenged by pre-
+    and asymptomatic transmission, TTI-avoiders, and undetected spreaders, which
+    strongly contribute to “hidden” infection chains. Here, we study a
+    semi-analytical model and identify two tipping points between controlled and
+    uncontrolled spread: (1) the behavior-driven reproduction number \(R_t^H\)
+    of the hidden chains becomes too large to be compensated by the TTI
+    capabilities, and (2) the number of new infections exceeds the tracing
+    capacity. Both trigger a self-accelerating spread. We investigate how these
+    tipping points depend on challenges like limited cooperation, missing
+    contacts, and imperfect isolation. Our results suggest that TTI alone is
+    insufficient to contain an otherwise unhindered spread of SARS-CoV-2,
+    implying that complementary measures like social distancing and improved
+    hygiene remain necessary.

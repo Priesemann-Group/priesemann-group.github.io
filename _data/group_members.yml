@@ -1,0 +1,131 @@
+categories:
+  - id: postdoctoral-researchers
+    title: Postdoctoral Researchers
+    icon: award
+    members:
+      - name: Dr. Sebastian Contreras
+        url: http://seba-contreras.github.io
+      - name: Dr. David Ehrlich
+        url: https://scholar.google.com/citations?user=_wyKzcwAAAAJ
+      - name: Dr. Jonas Dehning
+        url: https://www.jdehning.com/
+      - name: Dr. Piklu Mallick
+        url: https://piklumallick.github.io/
+      - name: Dr. Lucas Rudelt
+        url: https://scholar.google.com/citations?user=wPpGhg4AAAAJ&hl
+      - name: Dr. Andreas Schneider
+        url: http://ac-schneider.com
+      - name: Dr. Johannes Zierenberg
+        url: https://zierenberg.github.io/
+
+  - id: doctoral-researchers
+    title: Doctoral Researchers
+    icon: journal-text
+    members:
+      - name: Simon Bauer
+        url: https://scholar.google.com/citations?user=5w89ciEAAAAJ&hl
+      - name: Vincent Brockers
+        url: https://scholar.google.com/citations?user=gX22MpIAAAAJ
+      - name: Darius Burr
+      - name: Anastasia Golovin
+        url: https://scholar.google.com/citations?user=PF3fLfEAAAAJ
+      - name: Renée Goodman
+        url: https://scholar.google.com/citations?user=cI2cFvEAAAAJ
+      - name: Belén Hidalgo
+      - name: Darius Lewen
+        url: https://scholar.google.com/citations?user=cA8IzSoAAAAJ&hl
+      - name: Laura Müller
+        url: https://scholar.google.com/citations?user=KHQ3Gd8AAAAJ&hl
+      - name: Valentin Neuhaus
+        url: https://scholar.google.com/citations?user=DgQiA-wAAAAJ
+      - name: Irene Pellini
+      - name: Yashee Sinha
+      - name: Roman Ventzke
+        url: https://scholar.google.com/citations?user=YR9DdQUAAAAJ
+
+  - id: students
+    title: Master’s & Bachelor’s Students
+    icon: book
+    members:
+      - name: Hendrik von der Haar
+      - name: Heinrich Fischer
+      - name: Anna-Lotta Höper
+      - name: Antonio B. Marín-Carballo
+        url: https://scholar.google.com/citations?user=iicSOtkAAAAJ&hl
+      - name: Veronika Niemeyer
+
+  - id: visiting-affiliated-researchers
+    title: Visiting & Affiliated Researchers
+    icon: globe2
+    members:
+      - name: Dominik Hammer
+      - name: Sebastian Mohr
+        url: https://semohr.github.io
+      - name: Carlos Ernesto Munoz (with Michael Wibral)
+      - name: Sabina Nowakowska (UMG), jointly supervised with Antoine Huet
+      - name: Marcel Raabe (with Michael Wibral)
+        url: https://scholar.google.de/citations?user=pgFBKQ4AAAAJ&hl
+      - name: Tim Schäfer (with Anna Levina, Tübingen)
+        url: https://scholar.google.com/citations?user=MUVBVYsAAAAJ
+
+  # Alumni are ordered alphabetically by surname (ignoring academic titles).
+  - id: alumni
+    title: Alumni
+    icon: clock-history
+    members:
+      - name: Ahmet Akman (Middle East Technical University)
+        url: https://ahmetakman.github.io
+      - name: Mathias Andersen
+      - name: Dario Barone (Padova University)
+      - name: Moritz Becker (U Göttingen)
+      - name: Jasper Behnke
+      - name: Hauke Bluhm
+      - name: Mark Blümel
+      - name: Victor Brasch (EPFL Lausanne)
+      - name: Matilda Bühler
+      - name: Dr. Benjamin Cramer (Bosch)
+      - name: Jorge de Heuvel (U Mainz)
+      - name: Dr. Bruno del Papa (MERCK)
+        url: https://www.researchgate.net/profile/Bruno_Del_Papa
+      - name: Tristan Desgardin
+      - name: Konrad Dierks
+      - name: Melvin Dix
+      - name: Dr. Philipp Dönges
+      - name: Samuel L. Erdmann
+      - name: Jens Friedel
+      - name: Jan Geisler (Max Planck School “Matter to Life”)
+      - name: Philipp Gödde
+      - name: Daniel Gonzalez Marx
+      - name: Benedikt Grüger
+      - name: Annika Hagemann (Bosch)
+      - name: Conor Heins (ENI Göttingen)
+      - name: Kira Herff (U Göttingen)
+      - name: Helge Heuer (U Göttingen)
+      - name: Ulrik Hvid
+      - name: Dr. Emil Iftekhar
+        url: https://twitter.com/EmilIftekhar
+      - name: Madhura Ketkar (U Mainz)
+      - name: Moritz Layer (U Cambridge)
+      - name: Leonhard Leppin (U Göttingen)
+      - name: Rodrigo Amaral Lind
+      - name: Matthias Linden
+        url: https://twitter.com/matthiaslinden
+      - name: Matthias Loidolt (UCL)
+      - name: Dr. Fabian Mikulasch
+      - name: Dr. Corentin Nelias
+      - name: Dr. Joao Pinheiro Neto (MPI-DS Göttingen)
+        url: https://joaopn.github.io/
+      - name: Agastya Rana
+      - name: Bettina Royen (Max Planck School “Matter to Life”)
+      - name: Julian Schulz (Max Planck School “Matter to Life”)
+      - name: Mathias Sogorski (machine learning, PSI AG, Berlin)
+      - name: Mohammadreza Soltanipour (SISSA, Trieste)
+      - name: Dr. Paul Spitzner
+        url: https://makeitso.one/#/about
+      - name: Kjartan van Driel
+      - name: Henrik von der Emde (U Cambridge)
+      - name: Joel Max Wagner
+      - name: Timo Walter
+      - name: Dr. Jens Wilting (Bosch)
+        url: https://jenswilting.photography/
+      - name: Şüheda Yıldırım

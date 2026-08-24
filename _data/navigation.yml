@@ -3,7 +3,7 @@ main:
     url: /research/
   - title: "People"
     children:
-      - title: "My Group"
+      - title: "Members"
         url: /group/
       - title: "Collaborations"
         url: /collaborations/
@@ -13,7 +13,7 @@ main:
     url: /events/
   - title: "News & Outreach"
     url: /news-outreach/
-  - title: "CV"
+  - title: "About Viola"
     url: /cv/
   - title: "Contact"
     url: /contact/

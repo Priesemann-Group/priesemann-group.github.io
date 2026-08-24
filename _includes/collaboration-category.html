@@ -1,0 +1,37 @@
+<section class="card collaboration-category" aria-labelledby="collaboration-area-{{ include.area.id }}">
+  <div class="card-body">
+    <button
+      class="collaboration-category__toggle collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapse-collaboration-{{ include.area.id }}"
+      aria-expanded="false"
+      aria-controls="collapse-collaboration-{{ include.area.id }}"
+    >
+      <span class="collaboration-category__heading">
+        <span class="collaboration-category__eyebrow">Research area</span>
+        <span class="card-title" id="collaboration-area-{{ include.area.id }}">{{ include.area.title | escape }}</span>
+        <span class="collaboration-category__count">
+          {{ include.area.collaborators.size }} collaborators
+        </span>
+      </span>
+      <span class="collaboration-category__action" aria-hidden="true">
+        <span class="collaboration-category__action-label">View collaborators</span>
+        <i class="collapse-icon bi bi-chevron-down"></i>
+      </span>
+    </button>
+
+    <div class="collapse" id="collapse-collaboration-{{ include.area.id }}">
+      <div class="collaboration-category__directory">
+        <ul class="collaborator-list">
+          {% for collaborator in include.area.collaborators %}
+            <li>
+              <span class="collaborator-list__name">{{ collaborator.name | escape }}</span>
+              <span class="collaborator-list__affiliation">{{ collaborator.affiliation | escape }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+areas:
+  - id: neural-networks
+    title: Neural Networks
+    collaborators:
+      - name: Nicholas Dotson
+        affiliation: Salk Institute, USA
+      - name: Charles Gray
+        affiliation: Montana, USA
+      - name: Anna Levina
+        affiliation: Tübingen, Germany
+      - name: Joseph T. Lizier
+        affiliation: Sydney, Australia
+      - name: Florian Mormann
+        affiliation: Bonn, Germany
+      - name: Miguel Munoz
+        affiliation: Granada, Spain
+      - name: Andreas Neef
+        affiliation: Göttingen, Germany
+      - name: Adam Packer
+        affiliation: Oxford, UK
+      - name: Silvio Rizzoli
+        affiliation: Göttingen, Germany
+      - name: Oren Shriki
+        affiliation: Ben Gurion University, Israel
+      - name: Marion Silies
+        affiliation: Mainz, Germany
+      - name: Jordi Soriano
+        affiliation: Barcelona, Spain
+      - name: Raul Vicente
+        affiliation: Tartu, Estonia
+      - name: Michael Wibral
+        affiliation: Göttingen, Germany
+      - name: Hideaki Yamamoto
+        affiliation: Tohoku University, Sendai, Japan
+
+  - id: societal-dynamics
+    title: Societal Dynamics
+    collaborators:
+      - name: Eckart Bueren
+        affiliation: University of Göttingen, Germany
+      - name: André Calero Valdez
+        affiliation: Universität zu Lübeck, Germany
+      - name: David Garcia
+        affiliation: University of Konstanz, Germany
+      - name: Simon Gerdemann
+        affiliation: Berlin, Germany
+      - name: Mirjam Kretzschmar
+        affiliation: University Medical Center Utrecht, The Netherlands
+      - name: Tyll Krueger
+        affiliation: Wrozlaw University, Poland
+      - name: Jana Lasser
+        affiliation: University of Graz, Austria
+      - name: Michael Maes
+        affiliation: Karlsruhe Institut für Technologie, Germany
+      - name: Kai Nagel
+        affiliation: Technische Universität Berlin, Germany

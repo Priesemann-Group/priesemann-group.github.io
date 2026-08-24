@@ -1,0 +1,27 @@
+<article class="publication-card publication-card--{{ include.position }}">
+  <div class="publication-card__heading">
+    <h4>
+      <a
+        href="https://doi.org/{{ include.publication.doi }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >{{ include.publication.title }}</a>
+    </h4>
+    <div class="publication-card__venue">
+      <span>{{ include.publication.journal }}</span>
+      <time datetime="{{ include.publication.year }}">{{ include.publication.year }}</time>
+    </div>
+  </div>
+
+  <p class="publication-card__authors"><em>Authors:</em> {{ include.publication.authors }}</p>
+
+  <button
+    class="publication-card__abstract-toggle collapsed"
+    id="abstract-toggle-{{ include.topic_id }}-{{ include.id }}"
+    type="button"
+    aria-expanded="false"
+    aria-controls="abstract-{{ include.topic_id }}-{{ include.id }}"
+  >
+    Read full abstract
+  </button>
+</article>
