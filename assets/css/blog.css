@@ -236,6 +236,26 @@ html[data-theme="dark"] .chaos-blog .infection-costs {
   background: transparent;
 }
 
+.chaos-blog .chaos-regime-plot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.chaos-blog .chaos-regime-plot .chaos-plot-legend {
+  width: 75%;
+  height: auto;
+  margin: 0 auto 0.2rem;
+}
+
+.chaos-blog .chaos-regime-plot > #plot_arnold,
+.chaos-blog .chaos-regime-plot > #plot_costs_arnold {
+  width: 62%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .chaos-blog .container svg,
 .chaos-blog .svg-plot {
   display: block;
