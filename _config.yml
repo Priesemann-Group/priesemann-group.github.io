@@ -1,4 +1,5 @@
 locale: "en-US"
+theme: null
 site_theme: "priesemann"
 title: "MPRG Priesemann"
 title_separator: "-"
@@ -22,19 +23,6 @@ author:
   twitter: "ViolaPriesemann"
 
 breadcrumbs: false
-future: true
-read_more: "disabled"
-comments:
-  provider:
-atom_feed:
-  hide: true
-
-analytics:
-  provider: "false"
-
-include:
-  - _pages
-  - files
 exclude:
   - .asset-cache
   - .bundle
@@ -43,11 +31,11 @@ exclude:
   - .sass-cache
   - content/overview.html
   - Gemfile
+  - Gemfile.lock
   - LICENSE
+  - preview.sh
   - README.md
   - vendor
-keep_files:
-  - .git
 encoding: "utf-8"
 
 markdown: kramdown
@@ -77,16 +65,7 @@ permalink: /:categories/:title/
 timezone: Europe/Berlin
 
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
-
-whitelist:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
 
 compress_html:
   clippings: all

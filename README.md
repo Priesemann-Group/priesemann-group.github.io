@@ -22,9 +22,4 @@ when a source file changes. Stop it with `Ctrl+C`.
 The first invocation installs the dependencies from `Gemfile` into
 `vendor/bundle`; subsequent starts reuse them.
 
-## Deployment
-
-Push the repository to the configured GitHub Pages publishing branch. GitHub
-builds the Jekyll site and publishes the generated pages; Docker is not used.
-
 The Academic Pages template is distributed under the license in `LICENSE`.

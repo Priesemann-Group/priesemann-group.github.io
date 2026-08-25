@@ -1,6 +1,4 @@
-console.log('Started plotting.js:')
-
-function createsvg(selector, x_domain, y_domain, margin, width, height, x_scale = "linear", y_scale = "linear", shorten_x_format = false) { // console.log("created svg")
+function createsvg(selector, x_domain, y_domain, margin, width, height, x_scale = "linear", y_scale = "linear", shorten_x_format = false) {
 
     // append the svg object to the body of the page
     const svgEffectiveWidth = width + margin.left + margin.right;

@@ -3,8 +3,6 @@ categories:
     title: Postdoctoral Researchers
     icon: award
     members:
-      - name: Dr. Sebastian Contreras
-        url: http://seba-contreras.github.io
       - name: Dr. David Ehrlich
         url: https://scholar.google.com/citations?user=_wyKzcwAAAAJ
       - name: Dr. Jonas Dehning
@@ -32,8 +30,6 @@ categories:
       - name: Renée Goodman
         url: https://scholar.google.com/citations?user=cI2cFvEAAAAJ
       - name: Belén Hidalgo
-      - name: Darius Lewen
-        url: https://scholar.google.com/citations?user=cA8IzSoAAAAJ&hl
       - name: Laura Müller
         url: https://scholar.google.com/citations?user=KHQ3Gd8AAAAJ&hl
       - name: Valentin Neuhaus
@@ -53,12 +49,17 @@ categories:
       - name: Antonio B. Marín-Carballo
         url: https://scholar.google.com/citations?user=iicSOtkAAAAJ&hl
       - name: Veronika Niemeyer
+      - name: Leoni Wendt
 
   - id: visiting-affiliated-researchers
     title: Visiting & Affiliated Researchers
     icon: globe2
     members:
+      - name: Dr. Sebastian Contreras
+        url: http://seba-contreras.github.io
       - name: Dominik Hammer
+      - name: Darius Lewen
+        url: https://scholar.google.com/citations?user=cA8IzSoAAAAJ&hl
       - name: Sebastian Mohr
         url: https://semohr.github.io
       - name: Carlos Ernesto Munoz (with Michael Wibral)

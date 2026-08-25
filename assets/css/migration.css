@@ -1858,6 +1858,56 @@ button:focus-visible {
   border-top-width: 4px !important;
 }
 
+.join-degree-accordion {
+  margin-top: 1rem;
+  border-top: 1px solid var(--global-accent-color);
+}
+
+.page__content .join-degree-accordion .accordion-item,
+.page__content .join-degree-accordion .accordion-button,
+.page__content .join-degree-accordion .accordion-body {
+  color: var(--global-text-color);
+  background: var(--global-bg-color);
+}
+
+.page__content .join-degree-accordion .accordion-item {
+  border-color: var(--global-border-color);
+}
+
+.page__content .join-degree-accordion .accordion-button {
+  padding: 0.9rem 0;
+  font-size: 0.86rem;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.page__content .join-degree-accordion .accordion-button:not(.collapsed) {
+  color: var(--global-accent-color);
+}
+
+html[data-theme="dark"] .page__content .join-degree-accordion .accordion-button::after {
+  filter: grayscale(1) invert(1);
+}
+
+.page__content .join-degree-accordion .accordion-button:focus-visible {
+  outline: 2px solid var(--global-accent-color);
+  outline-offset: 2px;
+}
+
+.page__content .join-degree-accordion .accordion-body {
+  padding: 0 0 1rem;
+}
+
+.page__content .join-degree-accordion .accordion-body p {
+  margin: 0 0 0.85rem;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.join-degree-accordion .join-card__link {
+  margin-top: 0;
+}
+
 .join-application-card > .card-body {
   width: 100%;
   padding: clamp(1.15rem, 2.6vw, 1.55rem);

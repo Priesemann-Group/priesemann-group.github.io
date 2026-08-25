@@ -2,11 +2,8 @@
 permalink: /blog/
 ---
 
-<head>
-  <link rel="stylesheet" href="./assets/css/blog.css">
-  <!-- <script src="./assets/js/plotting.js"></script> -->
-</head>
-<!-- Identity of page-->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/blog.css">
+
 <div class="row identity bg-light text-dark">
   <h1 class="col col-xl-10 col-md-12 align-self-center"> Blog articles </h1>
   <p class="col col-xl-10 col-md-12 align-self-center">
@@ -14,13 +11,7 @@ permalink: /blog/
   </p>
 </div>
 
-<!-- <head>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="./assets/js/plotting.js"></script>
-</head> -->
-
 <div class="content col col-xl-10 col-md-12 align-self-center">
-  <!-- infoXpand -->
   <div class="card bg-light text-dark">
     <div class="card-body">
       <h2 class="card-title">Complex disease spread</h2>
@@ -33,11 +24,11 @@ permalink: /blog/
               desirable for
               a society that aims to balance disease burden and economic costs of the response.
               <br><br>
-              <a href="blog/chaos/index.html"> Read the full blog here!</a>
+              <a href="{{ site.baseurl }}/blog/chaos/">Read the full blog</a>
             </p>
           </div>
           <div class="column">
-            <img src="./assets/img/chaos_teaser.png" style="max-width: 200px;" class="img-fluid"
+            <img src="{{ site.baseurl }}/assets/img/chaos_teaser.png" style="max-width: 200px;" class="img-fluid"
               alt="Teaser image for the blog article about complex disease spread">
           </div>
         </div>

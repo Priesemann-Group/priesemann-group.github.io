@@ -1,22 +1,16 @@
-# Ignore the contents of the _site directory and other cache directories
+# Jekyll output and caches
 _site/
 .sass-cache/
 
-# Ignore the directory for local files during development
+# Local-only files
 local/
 
-# Ignore the Gemfile that is generated
+# Bundler dependencies and lockfile (GitHub Pages supplies the build versions)
 Gemfile.lock
-
-# Ignore the vendor file at root level and bundle for alternative installation
 /vendor/
 .bundle/
 
-# Ignore notebook autosave files
+# Editor and operating-system files
 .ipynb_checkpoints/
-
-# Ignore folders related to IDEs
 .vscode/
-
-# Ignore files created by MacOS
 .DS_Store
