@@ -352,6 +352,8 @@
     min-width: 12rem;
     max-width: calc(100vw - 2rem);
     margin-top: 15px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     background-color: var(--global-bg-color);
 
     &::before {

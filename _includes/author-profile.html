@@ -26,10 +26,14 @@
     >Profiles</button>
     <ul id="author-profile-links" class="author__urls social-icons">
       <li class="author__desktop author__location">
-        <i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}
+        <a href="{{ author.location_url | escape }}" rel="noopener noreferrer">
+          <i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}
+        </a>
       </li>
       <li class="author__desktop author__affiliation">
-        <i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}
+        <a href="{{ author.employer_url | escape }}" rel="noopener noreferrer">
+          <i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}
+        </a>
       </li>
       <li>
         <a href="{{ author.arxiv | escape }}" rel="noopener noreferrer">
