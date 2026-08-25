@@ -295,7 +295,7 @@
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
-    border-color: #fff transparent;
+    border-color: var(--global-bg-color) transparent;
     z-index: 1;
 
     @include breakpoint($large) {
@@ -319,6 +319,47 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+/* Mobile profile bar and dropdown */
+@media screen and (max-width: 924px) {
+  .sidebar {
+    position: relative;
+    z-index: 20;
+    margin-top: clamp(1.25rem, 6vw, 2rem);
+    margin-bottom: clamp(1.25rem, 6vw, 2rem);
+  }
+
+  .author__urls-wrapper {
+    z-index: 30;
+
+    button {
+      position: relative;
+      z-index: 2;
+    }
+
+    &.is-open .author__urls {
+      display: block !important;
+    }
+  }
+
+  .author__urls {
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    min-width: 12rem;
+    max-width: calc(100vw - 2rem);
+    margin-top: 15px;
+    background-color: var(--global-bg-color);
+
+    &::before {
+      left: calc(var(--profile-arrow-left, 50%) - 10px);
+    }
+
+    &::after {
+      left: calc(var(--profile-arrow-left, 50%) - 10px);
     }
   }
 }

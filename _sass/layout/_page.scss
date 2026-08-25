@@ -14,6 +14,10 @@
   @include breakpoint($x-large) {
     max-width: $x-large;
   }
+
+  @media screen and (max-width: 924px) {
+    margin-top: 0;
+  }
 }
 
 .page {
