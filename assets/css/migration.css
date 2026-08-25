@@ -1331,6 +1331,19 @@ button:focus-visible {
   margin-top: 0.2em;
 }
 
+/* Keep profile-link spacing consistent across flex and standard list rows. */
+.author__urls li {
+  margin-bottom: 5px;
+}
+
+.author__urls li:last-child {
+  margin-bottom: 0;
+}
+
+.author__urls li a {
+  margin-bottom: 0;
+}
+
 /* Landing page ----------------------------------------------------------- */
 .landing-hero {
   position: relative;
