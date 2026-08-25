@@ -7,6 +7,18 @@ html[data-theme="dark"] {
   color-scheme: dark;
 }
 
+.author__avatar--dark {
+  display: none;
+}
+
+html[data-theme="dark"] .author__avatar--light {
+  display: none;
+}
+
+html[data-theme="dark"] .author__avatar--dark {
+  display: block;
+}
+
 /*
  * Strict interface palettes:
  * light = Göttingen blue, black, white; dark = MPI green, black, white.

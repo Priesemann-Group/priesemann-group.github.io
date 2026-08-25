@@ -11,6 +11,7 @@ repository: "Priesemann-Group/priesemann-group.github.io"
 
 author:
   avatar: "viola_400x400.jpg"
+  avatar_light: "viola_400x400_blue.jpg"
   name: "Prof. Dr. Viola Priesemann"
   bio: "Max Planck Research Group Leader Complex Systems Theory"
   location: "Göttingen"
