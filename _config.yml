@@ -71,5 +71,8 @@ plugins:
 
 compress_html:
   clippings: all
+  # Keep JavaScript line boundaries intact in production. The chaos article's
+  # inline plotting code uses line comments and automatic semicolon insertion.
+  blanklines: true
   ignore:
     envs: development
