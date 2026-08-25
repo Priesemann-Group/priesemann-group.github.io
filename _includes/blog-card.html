@@ -1,0 +1,20 @@
+{% assign article = include.article %}
+<article class="card blog-card" aria-labelledby="blog-article-{{ article.id }}">
+  <div class="blog-card__visual">
+    <img
+      src="{{ article.image | relative_url }}"
+      alt="{{ article.image_alt | escape }}"
+      loading="lazy"
+      decoding="async"
+    >
+  </div>
+  <div class="card-body blog-card__body">
+    <span class="blog-card__eyebrow">{{ article.category | escape }}</span>
+    <h2 class="card-title" id="blog-article-{{ article.id }}">{{ article.title | escape }}</h2>
+    <p class="card-text">{{ article.description }}</p>
+    <a class="btn blog-card__link" href="{{ article.url | relative_url }}">
+      Read the full blog
+      <i class="bi bi-arrow-right" aria-hidden="true"></i>
+    </a>
+  </div>
+</article>

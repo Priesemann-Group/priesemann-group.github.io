@@ -1,0 +1,10 @@
+- id: complex-disease-spread
+  title: Complex disease spread
+  category: Research explained
+  description: >-
+    If a disease is severe enough, it will cause a societal response. Here, we discuss how this can lead to
+    highly complex dynamics in seasonal diseases. We demonstrate how such complex dynamics may even be
+    desirable for a society that aims to balance disease burden and economic costs of the response.
+  url: /blog/chaos/
+  image: /blog/chaos/img/chaos_blog_arnold.png
+  image_alt: Teaser plot showing regions with different infection dynamics

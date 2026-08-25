@@ -4,36 +4,15 @@ permalink: /blog/
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/blog.css">
 
-<div class="row identity bg-light text-dark">
-  <h1 class="col col-xl-10 col-md-12 align-self-center"> Blog articles </h1>
-  <p class="col col-xl-10 col-md-12 align-self-center">
+<div class="identity blog-index-identity bg-light text-dark">
+  <h1>Blog articles</h1>
+  <p>
     <strong>Blog articles about our research projects</strong>
   </p>
 </div>
 
-<div class="content col col-xl-10 col-md-12 align-self-center">
-  <div class="card bg-light text-dark">
-    <div class="card-body">
-      <h2 class="card-title">Complex disease spread</h2>
-      <div class="card-text">
-        <div class="container">
-          <div class="column">
-            <p>
-              If a disease is severe enough, it will cause a societal response. Here, we discuss how this can lead to
-              highly complex dynamics in seasonal diseases. We demonstrate how such complex dynamics may even be
-              desirable for
-              a society that aims to balance disease burden and economic costs of the response.
-              <br><br>
-              <a href="{{ site.baseurl }}/blog/chaos/">Read the full blog</a>
-            </p>
-          </div>
-          <div class="column">
-            <img src="{{ site.baseurl }}/assets/img/chaos_teaser.png" style="max-width: 200px;" class="img-fluid"
-              alt="Teaser image for the blog article about complex disease spread">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
+<section class="blog-index" aria-label="Published blog articles">
+  {% for article in site.data.blog_articles %}
+    {% include blog-card.html article=article %}
+  {% endfor %}
+</section>

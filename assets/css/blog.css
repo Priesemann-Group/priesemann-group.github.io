@@ -1,3 +1,107 @@
+/* Blog index ---------------------------------------------------------------- */
+
+.blog-index-identity {
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.blog-index {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.page__content .blog-card {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.72fr) minmax(0, 1.28fr);
+  min-height: 18rem;
+  margin: 0;
+  border-color: var(--global-border-color) !important;
+  border-top: 3px solid var(--global-accent-color) !important;
+}
+
+.blog-card__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-right: 1px solid var(--global-border-color);
+  background: #fff;
+}
+
+.blog-card__visual img {
+  display: block;
+  width: min(100%, 17rem);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.page__content .blog-card > .blog-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.blog-card__eyebrow {
+  margin-bottom: 0.55rem;
+  color: var(--global-accent-color);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.page__content .blog-card .card-title {
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  line-height: 1.2;
+}
+
+.page__content .blog-card .card-text {
+  max-width: 65ch;
+  margin-bottom: 1.4rem;
+  font-size: clamp(0.94rem, 1.3vw, 1rem);
+  line-height: 1.7;
+}
+
+.page__content .blog-card .blog-card__link {
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: auto;
+  border-radius: 0;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.blog-card__link .bi {
+  font-size: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.blog-card__link:hover .bi,
+.blog-card__link:focus-visible .bi {
+  transform: translateX(0.2rem);
+}
+
+@media (max-width: 47.99em) {
+  .page__content .blog-card {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card__visual {
+    min-height: 14rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  .blog-card__visual img {
+    width: min(72vw, 15rem);
+  }
+}
+
 /* Interactive article layout ------------------------------------------------ */
 
 .chaos-blog {
@@ -123,6 +227,13 @@ html[data-theme="dark"] .chaos-blog .infection-costs {
   margin: 0;
   padding: 0;
   text-align: left;
+}
+
+/* The sticky panel supplies the single visual frame for scroll-led figures. */
+.chaos-blog dt > .container {
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .chaos-blog .container svg,
