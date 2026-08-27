@@ -1413,6 +1413,20 @@ button:focus-visible {
   object-position: center;
 }
 
+/* Match the centered profile header while it is in its compact form. */
+@media screen and (max-width: 924px) {
+  .landing-hero__copy {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  .landing-hero__intro {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 #research-themes-title {
   scroll-margin-top: 6rem;
 }

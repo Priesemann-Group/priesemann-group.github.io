@@ -11,7 +11,10 @@
   animation: intro 0.3s both;
   animation-delay: 0.35s;
 
-  @include breakpoint($x-large) {
+  // Grow the desktop shell as soon as the sidebar layout is active. Keeping
+  // the wrapper capped at $large until $x-large left only ~550px for page
+  // content while viewport-based component grids had already expanded.
+  @include breakpoint($large) {
     max-width: $x-large;
   }
 
@@ -24,7 +27,6 @@
   @include breakpoint($large) {
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
   }
 
   .page__inner-wrap {
