@@ -5,6 +5,9 @@
 #main {
   @include container;
   @include clearfix;
+  // Keep wide tables inside their scroll containers rather than sizing the page.
+  width: 100%;
+  min-width: 0;
   margin-top: 2em;
   padding-left: 1em;
   padding-right: 1em;

@@ -6,7 +6,6 @@ permalink: /openpositions/
 {% assign open_positions = positions_by_date | where: "status", "open" %}
 {% assign closed_positions = positions_by_date | where: "status", "closed" %}
 
-<!-- Identity of page-->
 <div class="row identity bg-light text-dark">
   <h1 class="col col-xl-10 col-md-12 align-self-center">Join Us</h1>
   <p class="col col-xl-10 col-md-12 align-self-center">
@@ -14,278 +13,94 @@ permalink: /openpositions/
   </p>
 </div>
 
-<div class="content join-us-overview col col-xl-10 col-md-12 align-self-center">
-  <section class="join-section" aria-labelledby="specific-positions-title">
-    <header class="join-section__header">
-      <div>
-        <span class="join-section__eyebrow">Opportunities in the group</span>
-        <h2 id="specific-positions-title">Specific open positions</h2>
-        <p>Calls and PhD programs with topic-specific details and external deadlines.</p>
-      </div>
-      <span class="join-section__count">
-        {{ open_positions.size }} {% if open_positions.size == 1 %}opening{% else %}openings{% endif %}
-      </span>
-    </header>
+<div class="content join-us-overview">
+  <section class="join-section" id="general-applications" aria-labelledby="general-applications-title">
+    <h2 id="general-applications-title">Information for all applicants</h2>
+    <p>If our research topics resonate with your interest, please do not hesitate to send us your application.</p>
 
-    {% if open_positions.size > 0 %}
-      <div class="join-position-list">
-        {% for position in open_positions %}
-          {% include join-position-card.html position=position %}
-        {% endfor %}
-      </div>
-    {% else %}
-      <div class="card join-empty-state">
-        <div class="card-body">
-          <span class="join-empty-state__icon" aria-hidden="true">
-            <i class="bi bi-briefcase"></i>
-          </span>
-          <div>
-            <h3>No specific positions currently advertised</h3>
-            <p>
-              New calls will appear here. In the meantime, researchers and students whose interests align
-              with our work are welcome to use the general application route below.
-            </p>
-          </div>
-          <a class="join-card__link" href="{{ page.url }}#general-applications">General applications</a>
-        </div>
-      </div>
-    {% endif %}
+    <h3>Application documents</h3>
+    <p>
+      Please send a <em>single PDF</em> to
+      <a href="mailto:application.priesemann@ds.mpg.de">application.priesemannATds.mpg.de</a>, including:
+    </p>
+    <ul class="application-documents">
+      <li>Letter of motivation</li>
+      <li>CV</li>
+      <li>Transcript of records</li>
+      <li>Names of referees</li>
+    </ul>
+
+    <h3>Motivation letter</h3>
+    <p>
+      Your <strong>motivation letter</strong> (1–2 pages) should summarize your past research
+      achievements, skills, and interests, and include a short outline (~½ page) of “your research
+      interest” — the topic you would like to pursue in our group (this is not necessary for Bachelor
+      and Master theses, but welcome).
+    </p>
+    <p>
+      If you provide this, I will have a careful look at your application.
+      The short outline does not need to be a final research proposal; it serves as
+      basis for us to see the potential fit, and to discuss with you potential research projects in
+      an interview.
+    </p>
+
+    <h3>Use of AI</h3>
+    <p>Please add a short statement to which degree you have been using “AI” to prepare your letter of motivation.</p>
+    <p>We encourage applicants from all backgrounds and genders to contact us.</p>
   </section>
 
   <section class="join-section" aria-labelledby="recurring-programs-title">
-    <header class="join-section__header">
-      <div>
-        <span class="join-section__eyebrow">Plan ahead</span>
-        <h2 id="recurring-programs-title">Programs with recurring deadlines</h2>
-        <p>
-          Structured routes into interdisciplinary research in artificial intelligence, complex systems,
-          and neuroscience.
-        </p>
-      </div>
-    </header>
-
-    <div class="row g-3 join-program-grid">
+    <h2 id="recurring-programs-title">Programs with recurring deadlines</h2>
+    <p>
+      Structured routes into interdisciplinary research in artificial intelligence, complex systems,
+      and neuroscience.
+    </p>
+    <div class="join-program-grid">
       {% for program in site.data.join_us.recurring_programs %}
-        <div class="col-12 col-md-6 col-xl-4">
-          {% include join-program-card.html program=program %}
-        </div>
+        {% include join-program-card.html program=program %}
       {% endfor %}
     </div>
   </section>
 
-  <section class="join-section" aria-labelledby="other-pathways-title">
-    <header class="join-section__header">
-      <div>
-        <span class="join-section__eyebrow">More ways to get started</span>
-        <h2 id="other-pathways-title">Study and apply in Göttingen</h2>
-        <p>Explore physics at university level or approach our group directly with your research interests.</p>
-      </div>
-    </header>
-
-    <div class="row g-3 join-pathways-grid">
-      <div class="col-12 col-xl-5">
-        <article class="card join-pathway-card h-100" aria-labelledby="physics-programs-title">
-          <div class="card-body">
-            <div class="join-program-card__heading">
-              <span class="join-program-card__icon" aria-hidden="true">
-                <i class="bi bi-lightbulb"></i>
-              </span>
-              <span class="join-card__eyebrow">Bachelor’s and Master’s programs</span>
-            </div>
-            <h3 id="physics-programs-title">Physics degree programs in Göttingen</h3>
-
-            <div class="accordion accordion-flush join-degree-accordion" id="physics-degree-programs">
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="physik-plus-heading">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#physik-plus-details"
-                    aria-expanded="false"
-                    aria-controls="physik-plus-details"
-                  >
-                    Physik+ (B.Sc.)
-                  </button>
-                </h4>
-                <div
-                  class="accordion-collapse collapse"
-                  id="physik-plus-details"
-                  aria-labelledby="physik-plus-heading"
-                  data-bs-parent="#physics-degree-programs"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      The four-year Bachelor “Physik Interdisziplinär” combines a strong foundation in physics with
-                      flexible interdisciplinary pathways such as artificial intelligence, philosophy, or sustainability.
-                    </p>
-                    <a
-                      class="join-card__link"
-                      href="https://physikgoettingen.magister.de/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Discover Physik+ <span aria-hidden="true">↗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="physics-bachelor-heading">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#physics-bachelor-details"
-                    aria-expanded="false"
-                    aria-controls="physics-bachelor-details"
-                  >
-                    Physics (B.Sc.)
-                  </button>
-                </h4>
-                <div
-                  class="accordion-collapse collapse"
-                  id="physics-bachelor-details"
-                  aria-labelledby="physics-bachelor-heading"
-                  data-bs-parent="#physics-degree-programs"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      The standard six-semester Bachelor of Science in Physics provides a broad foundation in
-                      experimental and theoretical physics.
-                    </p>
-                    <a
-                      class="join-card__link"
-                      href="https://www.uni-goettingen.de/de/594378.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Explore the Physics B.Sc. <span aria-hidden="true">↗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="physics-master-heading">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#physics-master-details"
-                    aria-expanded="false"
-                    aria-controls="physics-master-details"
-                  >
-                    Physics (M.Sc./Joint Degree)
-                  </button>
-                </h4>
-                <div
-                  class="accordion-collapse collapse"
-                  id="physics-master-details"
-                  aria-labelledby="physics-master-heading"
-                  data-bs-parent="#physics-degree-programs"
-                >
-                  <div class="accordion-body">
-                    <p>
-                      The research-oriented Master of Science in Physics offers advanced study and specialization
-                      across Göttingen’s broad physics research landscape.
-                    </p>
-                    <a
-                      class="join-card__link"
-                      href="https://www.uni-goettingen.de/de/594492.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Explore the Physics M.Sc. <span aria-hidden="true">↗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-12 col-xl-7">
-        <article class="card join-application-card h-100" id="general-applications" aria-labelledby="general-applications-title">
-          <div class="card-body">
-            <span class="join-card__eyebrow">Bachelor / Master / PhD / PostDoc</span>
-            <h3 id="general-applications-title">Information for all applicants (Bachelor/Master/PhD/PostDoc)</h3>
-            <p>If our research topics resonate with your interest, please do not hesitate to send us your application.</p>
-            <p>
-              Please send a <em>single PDF</em> including: letter of motivation, CV, transcript of records, and namess of referees to
-              <a href="mailto:application.priesemann@ds.mpg.de">application.priesemannATds.mpg.de</a>.
-            </p>
-
-            <button
-              class="join-application-card__toggle collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#general-application-guidance"
-              aria-expanded="false"
-              aria-controls="general-application-guidance"
-            >
-              <span>Read the application guidance</span>
-              <i class="collapse-icon bi bi-chevron-down" aria-hidden="true"></i>
-            </button>
-
-            <div class="collapse" id="general-application-guidance">
-              <div class="join-application-card__details">
-                <p>
-                  Your <strong>motivation letter</strong> (1–2 pages) should summarize your past research achievements, skills, and interests, and include a short outline (~½ page) of “your research interest” — the topic you would like to pursue in our group (this not necessary for Bachelor and Master theses, but welcome). If you provide this, I will have a careful look at your application. The short outline does not need to be a final research proposal; it serves as basis for us to see the potential fit, and to discuss with you potential research projects in an interview.
-                </p>
-                <p>
-                  Please add a short statement to which degree you have been using “AI” to prepare your letter of motivation.
-                </p>
-                <p>
-                  We encourage applicants from all backgrounds and genders to contact us.
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
+  <section class="join-section" aria-labelledby="physics-programs-title">
+    <h2 id="physics-programs-title">Physics degree programs in Göttingen</h2>
+    <div class="join-program-grid">
+      <article class="join-program">
+        <h3>Physik+ (B.Sc.)</h3>
+        <p> The four-year Bachelor “Physik Interdisziplinär” combines a strong foundation in physics with flexible interdisciplinary pathways such as artificial intelligence, philosophy, or sustainability. </p>
+        <a href="https://physikgoettingen.magister.de/" target="_blank" rel="noopener noreferrer" > Discover Physik+ </a>
+      </article>
+      <article class="join-program">
+        <h3>Physics (B.Sc.)</h3>
+        <p> The standard six-semester Bachelor of Science in Physics provides a broad foundation in experimental and theoretical physics. </p>
+        <a href="https://www.uni-goettingen.de/de/594378.html" target="_blank" rel="noopener noreferrer" > Explore the Physics B.Sc. </a>
+      </article>
+      <article class="join-program">
+        <h3>Physics (M.Sc./Joint Degree)</h3>
+        <p> The research-oriented Master of Science in Physics offers advanced study and specialization across Göttingen’s broad physics research landscape. </p>
+        <a href="https://www.uni-goettingen.de/de/594492.html" target="_blank" rel="noopener noreferrer" > Explore the Physics M.Sc. </a>
+      </article>
     </div>
   </section>
 
-  {% if closed_positions.size > 0 %}
-    <section class="join-section join-archive" aria-labelledby="previous-calls-title">
-      <div class="card join-archive__card">
-        <div class="card-body">
-          <button
-            class="join-archive__toggle collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#previous-calls"
-            aria-expanded="false"
-            aria-controls="previous-calls"
-          >
-            <span>
-              <span class="join-card__eyebrow">Archive</span>
-              <span class="join-archive__title" id="previous-calls-title">Previous calls</span>
-            </span>
-            <span class="join-card__action" aria-hidden="true">
-              <span>View archive</span>
-              <span class="join-card__toggle-icon">
-                <i class="collapse-icon bi bi-chevron-down"></i>
-              </span>
-            </span>
-          </button>
-
-          <div class="collapse" id="previous-calls">
-            <div class="join-archive__content">
-              <div class="row g-3">
-                {% for position in closed_positions %}
-                  <div class="col-12">
-                    {% include join-position-card.html position=position %}
-                  </div>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  {% if open_positions.size > 0 %}
+    <section class="join-section" aria-labelledby="specific-positions-title">
+      <h2 id="specific-positions-title">Specific open positions</h2>
+      <p>Calls and PhD programs with topic-specific details and external deadlines.</p>
+      {% for position in open_positions %}
+        {% include join-position-card.html position=position %}
+      {% endfor %}
     </section>
+  {% endif %}
+
+  {% if closed_positions.size > 0 %}
+    <details class="join-archive">
+      <summary>Previous calls</summary>
+      <div class="join-archive__content">
+        {% for position in closed_positions %}
+          {% include join-position-card.html position=position %}
+        {% endfor %}
+      </div>
+    </details>
   {% endif %}
 </div>

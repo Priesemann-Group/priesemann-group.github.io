@@ -36,6 +36,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - local
   - preview.sh
   - README.md
   - vendor

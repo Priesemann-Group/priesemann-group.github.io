@@ -3,7 +3,7 @@ permalink: /collaborations/
 ---
 
 <div class="row identity bg-light text-dark">
-  <h1 class="col col-xl-10 col-md-12 align-self-center">Selected collaborations</h1>
+  <h1 class="col col-xl-10 col-md-12 align-self-center">Collaborators</h1>
   <p class="col col-xl-10 col-md-12 align-self-center">
     Our collaborations bring together complementary perspectives and expertise
     to address questions that benefit from crossing disciplinary boundaries.
@@ -11,9 +11,7 @@ permalink: /collaborations/
 </div>
 
 <div class="content collaborations-overview col col-xl-10 col-md-12 align-self-center">
-  <div class="collaborations-grid">
-    {% for area in site.data.collaborations.areas %}
-      {% include collaboration-category.html area=area %}
-    {% endfor %}
-  </div>
+  {% for area in site.data.collaborations.areas %}
+    {% include collaboration-category.html area=area %}
+  {% endfor %}
 </div>

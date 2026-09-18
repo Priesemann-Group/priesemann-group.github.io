@@ -1,12 +1,10 @@
 main:
   - title: "Research"
     url: /research/
-  - title: "People"
-    children:
-      - title: "Members"
-        url: /group/
-      - title: "Collaborations"
-        url: /collaborations/
+  - title: "Group Members"
+    url: /group/
+  - title: "Collaborators"
+    url: /collaborations/
   - title: "Join Us"
     url: /openpositions/
   - title: "Events"

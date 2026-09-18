@@ -3,7 +3,7 @@ permalink: /group/
 ---
 
 <div class="row identity bg-light text-dark">
-  <h1 class="col col-xl-10 col-md-12 align-self-center">Members</h1>
+  <h1 class="col col-xl-10 col-md-12 align-self-center">Group Members</h1>
   <p class="col col-xl-10 col-md-12 align-self-center">
     Meet the people behind our research, bringing together diverse expertise
     from physics and mathematics to neuroscience and computational social
@@ -12,9 +12,7 @@ permalink: /group/
 </div>
 
 <div class="content members-overview col col-xl-10 col-md-12 align-self-center">
-  <div class="members-grid">
-    {% for category in site.data.group_members.categories %}
-      {% include member-category.html category=category %}
-    {% endfor %}
-  </div>
+  {% for category in site.data.group_members.categories %}
+    {% include member-category.html category=category %}
+  {% endfor %}
 </div>

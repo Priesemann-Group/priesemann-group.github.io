@@ -61,39 +61,18 @@
   white-space: nowrap;
 
   &--lg {
-    padding-right: 2em;
+    padding-right: 0.5em;
     font-weight: 700;
   }
 }
 
-@include breakpoint($x-large) {
-  .masthead__menu-item--first-nav {
-    padding-left: 3.75rem;
-  }
-
-  #theme-toggle {
-    position: absolute;
-    top: 50%;
-    right: 0.3rem;
-    transform: translateY(-50%);
-
-    a {
-      margin: 0;
-    }
-  }
-}
-
-.masthead__menu-item.selected > a,
-.masthead__menu-item.selected .masthead__dropdown-toggle,
-.masthead__submenu .selected > a {
+.masthead__menu-item.selected > a {
   color: var(--global-text-color);
   font-weight: 700;
   border-bottom: 2px solid var(--global-text-color);
 }
 
-.masthead__menu-item.selected > a:hover,
-.masthead__menu-item.selected .masthead__dropdown-toggle:hover,
-.masthead__submenu .selected > a:hover {
+.masthead__menu-item.selected > a:hover {
   color: var(--global-text-color);
   border-bottom: 2px solid var(--global-text-color);
 }
