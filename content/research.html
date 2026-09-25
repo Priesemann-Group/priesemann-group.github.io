@@ -17,38 +17,45 @@ mathjax: true
 </div>
 
 <div class="content research-topics col col-xl-10 col-md-12 align-self-center">
-  <section class="research-theme">
-    <h2>Infogenesis in neural networks</h2>
-    <p>
-      <strong>Life hinges on information processing:</strong> to navigate the world, animals rely on
-      their brains – and thus on the fine, collective interactions of millions or billions of
-      neurons. Importantly, these <strong>networks can learn in a self-organized manner</strong>,
-      i.e., they update the connectivity and information flow between the neurons without any
-      explicit teacher signal. We aim to understand the basic principles of this <strong>emergent
-      information flow or “infogenesis”</strong> using the approaches from statistical physics and
-      information theory. Understanding the emergence of infogenesis is very interesting per se; in
-      addition, as evolution has optimized brains over &gt;250M years, our studies can also inspire
-      novel, robust, and energy-efficient compute principles for AI.
-    </p>
-  </section>
+  <div class="research-theme-grid">
+    <section class="research-theme">
+      <h2>Infogenesis in neural networks</h2>
+      <p>
+        <strong>Life hinges on information processing:</strong> to navigate the world, animals rely on
+        their brains – and thus on the fine, collective interactions of millions or billions of
+        neurons. Importantly, these <strong>networks can learn in a self-organized manner</strong>,
+        i.e., they update the connectivity and information flow between the neurons without any
+        explicit teacher signal. We aim to understand the basic principles of this <strong>emergent
+        information flow or “infogenesis”</strong> using the approaches from statistical physics and
+        information theory. Understanding the emergence of infogenesis is very interesting per se; in
+        addition, as evolution has optimized brains over &gt;250M years, our studies can also inspire
+        novel, robust, and energy-efficient compute principles for AI.
+      </p>
+    </section>
 
-  <section class="research-theme">
-    <h2>Information spread in social networks</h2>
-    <p>
-      <strong>Information also spreads in social networks</strong>, when people meet, via the press,
-      but also via online platforms. The recent availability of immense online data enables us now
-      to study the spread of information and disinformation in social networks, in the context of
-      the COVID pandemic and beyond. To that end, we gather large data sets from the online
-      platforms. Interestingly, the online information spread reveals principles akin to the ones
-      that determine activity propagation in the brain, suggesting that <strong>similar principles
-      shape information spread on these very distinct scales</strong> – on the micro-level of neural
-      networks, and on the macro-level of societies.
-    </p>
-  </section>
+    <section class="research-theme">
+      <h2>Information spread in social networks</h2>
+      <p>
+        <strong>Information also spreads in social networks</strong>, when people meet, via the press,
+        but also via online platforms. The recent availability of immense online data enables us now
+        to study the spread of information and disinformation in social networks, in the context of
+        the COVID pandemic and beyond. To that end, we gather large data sets from the online
+        platforms. Interestingly, the online information spread reveals principles akin to the ones
+        that determine activity propagation in the brain, suggesting that <strong>similar principles
+        shape information spread on these very distinct scales</strong> – on the micro-level of neural
+        networks, and on the macro-level of societies.
+      </p>
+    </section>
+  </div>
 
-  {% for topic in site.data.research.topics %}
-    {% include research-topic.html topic=topic %}
-  {% endfor %}
+  <section class="research-details" aria-labelledby="research-details-title">
+    <h2 id="research-details-title">Research topics in detail</h2>
+    <div class="research-topic-list">
+      {% for topic in site.data.research.topics %}
+        {% include research-topic.html topic=topic %}
+      {% endfor %}
+    </div>
+  </section>
 </div>
 
 <section class="all-publications" aria-labelledby="all-publications-title">

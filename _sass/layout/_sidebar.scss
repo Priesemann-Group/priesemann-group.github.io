@@ -372,6 +372,10 @@
     &.is-open .author__urls {
       display: block !important;
     }
+
+    &:not(.is-open) .author__urls {
+      display: none !important;
+    }
   }
 
   .author__urls {

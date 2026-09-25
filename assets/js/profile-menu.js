@@ -14,6 +14,7 @@ if (profileWrapper) {
   };
 
   const setProfileMenuOpen = (open) => {
+    profileMenu.style.removeProperty("display");
     profileWrapper.classList.toggle("is-open", open);
     profileButton.classList.toggle("open", open);
     profileButton.setAttribute("aria-expanded", String(open));
@@ -50,6 +51,7 @@ if (profileWrapper) {
   });
 
   mobileProfile.addEventListener("change", () => setProfileMenuOpen(false));
+  window.addEventListener("pageshow", () => setProfileMenuOpen(false));
   window.addEventListener("resize", () => {
     if (profileWrapper.classList.contains("is-open")) {
       alignProfileArrow();
@@ -57,4 +59,5 @@ if (profileWrapper) {
   });
 
   profileMenu.addEventListener("click", () => setProfileMenuOpen(false));
+  setProfileMenuOpen(false);
 }

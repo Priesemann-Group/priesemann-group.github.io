@@ -1,13 +1,17 @@
-<section class="research-topic" aria-labelledby="research-topic-{{ include.topic.id }}">
-  <h2 id="research-topic-{{ include.topic.id }}">{{ include.topic.title }}</h2>
-  <p>{{ include.topic.description }}</p>
-  <details class="research-publications">
-    <summary>Selected publications</summary>
-    <ul class="publication-list">
-      {% for publication_id in include.topic.publications %}
-        {% assign publication = site.data.selected_publications[publication_id] %}
-        {% include publication-card.html publication=publication %}
-      {% endfor %}
-    </ul>
-  </details>
-</section>
+<details class="research-topic">
+  <summary id="research-topic-{{ include.topic.id }}">
+    <span>{{ include.topic.title }}</span>
+  </summary>
+  <div class="research-topic__body">
+    <p>{{ include.topic.description }}</p>
+    <div class="research-publications">
+      <h3>Selected publications</h3>
+      <ul class="publication-list">
+        {% for publication_id in include.topic.publications %}
+          {% assign publication = site.data.selected_publications[publication_id] %}
+          {% include publication-card.html publication=publication %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</details>

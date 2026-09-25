@@ -179,7 +179,7 @@
 
   a {
     display: block;
-    margin: 0 0.6rem;
+    margin: 0 clamp(0.55rem, 1vw, 0.75rem);
     padding: 0.5rem 0;
     color: var(--global-masthead-link-color);
     text-decoration: none;
@@ -321,6 +321,32 @@
     }
 
 
+  }
+}
+
+/* Once every primary item fits, distribute the links across the same wide
+   content measure used by the original masthead. The priority menu remains
+   in charge below this breakpoint. */
+@include breakpoint($x-large) {
+  .greedy-nav.greedy-nav--distributed .visible-links {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    li {
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    a {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .masthead__menu-item--lg {
+    padding-right: 0;
   }
 }
 

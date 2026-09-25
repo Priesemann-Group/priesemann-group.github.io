@@ -8,6 +8,10 @@ const syncMenuState = () => {
   menuButton.setAttribute('aria-expanded', String(!overflowMenu.classList.contains('hidden')));
 };
 
+const syncNavLayout = () => {
+  nav.classList.toggle('greedy-nav--distributed', menuButton.classList.contains('hidden'));
+};
+
 const closeMenu = () => {
   overflowMenu.classList.add('hidden');
   menuButton.classList.remove('close');
@@ -15,7 +19,9 @@ const closeMenu = () => {
 };
 
 new MutationObserver(syncMenuState).observe(overflowMenu, { attributes: true, attributeFilter: ['class'] });
+new MutationObserver(syncNavLayout).observe(menuButton, { attributes: true, attributeFilter: ['class'] });
 syncMenuState();
+syncNavLayout();
 
 document.addEventListener('click', event => {
   if (!nav.contains(event.target)) closeMenu();
