@@ -1,36 +1,4 @@
 specific_positions:
-  - id: cidas-fellowship
-    title: "CIDAS Fellowship 2026/2027 (Data Science)"
-    level: "Early-career Postdoc"
-    posted: 2026-02-25
-    deadline: "April 5, 2026"
-    deadline_iso: 2026-04-05
-    status: closed
-    summary: >-
-      CIDAS supports outstanding early-career postdocs in developing an independent data-science research
-      project in collaboration with at least one CIDAS member.
-    details: |-
-      <p class="h6 fw-bold mb-2">Key points</p>
-      <ul class="mb-3">
-        <li><strong>Target group:</strong> early-career postdocs</li>
-        <li><strong>Project:</strong> independent data-science project; collaboration with ≥1 CIDAS member required</li>
-        <li><strong>Funding:</strong> up to €85,000; possible extension by up to one year (see call)</li>
-        <li><strong>Apply:</strong> e-mail to <a href="mailto:cidas@uni-goettingen.de">cidas@uni-goettingen.de</a></li>
-      </ul>
-
-      <p class="h6 fw-bold mb-2">Required documents</p>
-      <ul class="mb-3">
-        <li>Research idea (max. 5 pages) incl. work plan and budget</li>
-        <li>CV</li>
-        <li>Recommendation letter (mentor must not be former PhD supervisor; incl. infrastructure commitment)</li>
-      </ul>
-
-      <p class="mb-0">
-        <a href="/files/Announcement_CIDAS_Fellowship_26_27_EN.pdf" target="_blank" rel="noopener">
-          Full announcement (PDF)
-        </a>
-      </p>
-
   - id: casus-ecosystems
     title: "PhD position: Resilience of water-limited ecosystems (CASUS–HZDR & MPI-DS)"
     level: "PhD"
@@ -117,28 +85,40 @@ specific_positions:
       </p>
 
 recurring_programs:
+  - id: matter-to-life
+    title: "Max Planck School Matter to Life (MtL)"
+    audience: "Integrated MSc / PhD"
+    icon: bounding-box-circles
+    application_window: "September 1–December 1 each year"
+    description: >-
+      How does life emerge from matter? This fully funded five-year program combines a two-year
+      interdisciplinary Master’s phase with a three-year PhD research phase and is particularly relevant
+      to applicants at Bachelor’s or Master’s level.
+    url: "https://mattertolife.maxplanckschools.org/apply-to-the-mps-mtl"
+    link_label: "Explore Matter to Life"
+
   - id: mp-aix
     title: "Max Planck Artificial Intelligence Network (MP-AIX)"
     audience: "PhD"
     icon: cpu
     application_window: "October 1–31 each year"
     description: >-
-      MP-AIX connects artificial intelligence and machine learning with scientific application areas
-      across the Max Planck Society. Doctoral researchers work with two advisors at different institutes
-      and spend time at both sites.
+      MP-AIX connects artificial intelligence methods with scientific application fields. It centrally
+      co-funds 50% of the personnel costs for new PhD positions, with the remaining funding provided by
+      the participating institutes, and matches shortlisted applicants with potential advisors.
     url: "https://ai.mpg.de/how-to-join-phd"
     link_label: "Explore MP-AIX"
 
-  - id: matter-to-life
-    title: "Integrated Master’s/ PhD Program in Matter to Life"
-    audience: "Integrated Master’s / PhD"
-    icon: bounding-box-circles
-    application_window: "September 1–December 1 each year"
+  - id: cidas-fellowship
+    title: "CIDAS Fellowship"
+    audience: "Early-career postdocs"
+    icon: person-workspace
+    application_window: "Calls offered regularly"
     description: >-
-      We are looking for students who are genuinely interested in an interdisciplinary education,
-      spanning topics in physics, chemistry, and biology.
-    url: "https://mattertolife.maxplanckschools.org/application"
-    link_label: "Explore Matter to Life"
+      CIDAS regularly offers fellowships for early-career postdocs developing independent data-science
+      projects. Check the current call and contact us early if you would like our group to host your project.
+    url: "https://www.uni-goettingen.de/en/cidas%2Bfellowship/694026.html"
+    link_label: "Explore the CIDAS Fellowship"
 
   - id: goettingen-neurosciences
     title: "Annual PhD positions: Experimental and Computational Neuroscience"

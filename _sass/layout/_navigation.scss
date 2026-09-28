@@ -324,25 +324,44 @@
   }
 }
 
-/* Once every primary item fits, distribute the links across the same wide
-   content measure used by the original masthead. The priority menu remains
-   in charge below this breakpoint. */
-@include breakpoint($x-large) {
+/* On wide screens, mirror the page grid: the brand occupies the profile
+   rail, Research begins at the main-content edge, and the remaining controls
+   are distributed to the content's right edge. At narrower widths the
+   priority menu keeps its natural-width layout and moves items into overflow. */
+@include breakpoint($large) {
   .greedy-nav.greedy-nav--distributed .visible-links {
+    --content-start: calc(21.186440678% + clamp(0.25rem, 0.65vw, 0.55rem));
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
 
-    li {
+    > li {
       display: block;
       flex: 0 0 auto;
+      min-width: 0;
+    }
+
+    > .masthead__menu-item--lg {
+      flex-basis: var(--content-start);
+
+      > a {
+        width: fit-content;
+      }
+    }
+
+    > li:nth-child(n + 3) {
+      margin-left: auto;
+    }
+
+    > #theme-toggle {
+      margin-right: clamp(0.25rem, 0.65vw, 0.55rem);
     }
 
     a {
       margin-right: 0;
       margin-left: 0;
     }
+
   }
 
   .masthead__menu-item--lg {
@@ -350,6 +369,11 @@
   }
 }
 
+@include breakpoint($x-large) {
+  .greedy-nav.greedy-nav--distributed .visible-links {
+    --content-start: calc(240px + 4.2372881356% + clamp(0.25rem, 0.65vw, 0.55rem));
+  }
+}
 
 /*
    Navigation list

@@ -281,6 +281,10 @@ summary:focus-visible,
   margin-top: clamp(1.25rem, 3vw, 2rem);
 }
 
+.page__content > .content + .identity {
+  margin-top: clamp(3rem, 7vw, 5rem);
+}
+
 .page__content .identity {
   position: relative;
   display: flex;
@@ -997,6 +1001,10 @@ summary:focus-visible,
   border-top: 3px solid var(--global-accent-color);
 }
 
+.join-section--recurring .join-program-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .join-program--secondary {
   background: var(--global-bg-color);
 }
@@ -1017,6 +1025,10 @@ summary:focus-visible,
 }
 
 @media (max-width: 44em) {
+  .join-section--recurring .join-program-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .application-guidance {
     grid-template-columns: minmax(0, 1fr);
   }

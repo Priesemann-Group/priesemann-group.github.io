@@ -1,5 +1,6 @@
 ---
 permalink: /group/
+title: People
 ---
 
 <div class="row identity bg-light text-dark">
@@ -14,5 +15,19 @@ permalink: /group/
 <div class="content members-overview col col-xl-10 col-md-12 align-self-center">
   {% for category in site.data.group_members.categories %}
     {% include member-category.html category=category %}
+  {% endfor %}
+</div>
+
+<div id="collaborators" class="row identity bg-light text-dark">
+  <h1 class="col col-xl-10 col-md-12 align-self-center">Collaborators</h1>
+  <p class="col col-xl-10 col-md-12 align-self-center">
+    Our collaborations bring together complementary perspectives and expertise
+    to address questions that benefit from crossing disciplinary boundaries.
+  </p>
+</div>
+
+<div class="content collaborations-overview col col-xl-10 col-md-12 align-self-center">
+  {% for area in site.data.collaborations.areas %}
+    {% include collaboration-category.html area=area %}
   {% endfor %}
 </div>
