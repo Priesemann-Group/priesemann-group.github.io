@@ -174,7 +174,7 @@
 
 .greedy-nav {
   position: relative;
-  min-width: 250px;
+  min-width: 0;
   background: var(--global-bg-color);
 
   a {
@@ -322,6 +322,13 @@
 
 
   }
+}
+
+/* Keep the theme and overflow controls reachable with enlarged text. */
+.greedy-nav--compact .masthead__menu-item--lg a {
+  max-width: var(--nav-brand-max-width);
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 /* On wide screens, mirror the page grid: the brand occupies the profile
