@@ -1,7 +1,6 @@
 // Measure the current layout instead of caching widths across breakpoints.
 const nav = document.querySelector('#site-nav');
-const menuButton = nav.querySelector('.masthead__menu-item--overflow-control button');
-const menuButtonItem = menuButton.closest('li');
+const menuButton = nav.querySelector(':scope > button');
 const overflowMenu = nav.querySelector('.hidden-links');
 const visibleLinks = nav.querySelector('.visible-links');
 const brand = visibleLinks.querySelector('.masthead__menu-item--lg a');
@@ -25,14 +24,12 @@ const closeMenu = () => setMenuOpen(false);
 const fitsBefore = rightEdge => {
   let previousRight = nav.getBoundingClientRect().left;
 
-  return Array.from(visibleLinks.querySelectorAll(':scope > li > a, :scope > li > button'))
-    .filter(control => control.getClientRects().length)
-    .every(control => {
-      const bounds = control.getBoundingClientRect();
-      const fits = bounds.left >= previousRight - 0.5 && bounds.right <= rightEdge + 0.5;
-      previousRight = bounds.right;
-      return fits;
-    });
+  return Array.from(visibleLinks.querySelectorAll(':scope > li > a')).every(link => {
+    const bounds = link.getBoundingClientRect();
+    const fits = bounds.left >= previousRight - 0.5 && bounds.right <= rightEdge + 0.5;
+    previousRight = bounds.right;
+    return fits;
+  });
 };
 
 const layoutNavigation = () => {
@@ -46,18 +43,17 @@ const layoutNavigation = () => {
     visibleLinks.insertBefore(overflowMenu.firstElementChild, themeItem);
   }
   nav.classList.remove('greedy-nav--compact');
-  nav.classList.remove('greedy-nav--overflowing');
   nav.style.removeProperty('--nav-brand-max-width');
-  menuButtonItem.classList.add('hidden');
+  menuButton.classList.add('hidden');
   nav.classList.add('greedy-nav--distributed');
 
   if (!fitsBefore(nav.getBoundingClientRect().right)) {
     nav.classList.remove('greedy-nav--distributed');
-    nav.classList.add('greedy-nav--overflowing');
-    menuButtonItem.classList.remove('hidden');
+    menuButton.classList.remove('hidden');
 
-    // All visible controls, including the menu button, share one flex row.
-    const rightEdge = nav.getBoundingClientRect().right;
+    // Reserve the actual button bounds and a gap, including its padding.
+    const gap = parseFloat(getComputedStyle(nav).fontSize) * 0.5;
+    const rightEdge = menuButton.getBoundingClientRect().left - gap;
     const movableItems = Array.from(visibleLinks.children).filter(item => !item.classList.contains('persist'));
 
     while (!fitsBefore(rightEdge) && movableItems.length) {
@@ -67,7 +63,7 @@ const layoutNavigation = () => {
     // At very narrow widths or enlarged text, keep both persistent controls
     // usable by allowing only the brand text to wrap.
     if (!fitsBefore(rightEdge)) {
-      const excess = menuButton.getBoundingClientRect().right - rightEdge;
+      const excess = themeControl.getBoundingClientRect().right - rightEdge;
       const brandWidth = Math.max(1, brand.getBoundingClientRect().width - excess);
       nav.style.setProperty('--nav-brand-max-width', `${brandWidth}px`);
       nav.classList.add('greedy-nav--compact');

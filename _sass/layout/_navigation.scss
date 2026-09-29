@@ -190,13 +190,10 @@
   }
 
   button {
-    display: flex;
-    position: static;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
+    position: absolute;
     height: 2.5rem;
-    padding: 0;
+    right: 0;
+    padding: 0 0.5rem;
     border: 0;
     outline: none;
     background-color: var(--global-bg-color);
@@ -327,47 +324,11 @@
   }
 }
 
-/* Once links move into the overflow menu, distribute every remaining control
-   in one row. Keeping the menu button in this flow avoids scale-dependent
-   gaps caused by absolute positioning. */
-.greedy-nav--overflowing .visible-links {
-  display: flex;
-  gap: clamp(0.35rem, 2vw, 1.25rem);
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-
-  > li {
-    display: block;
-    flex: 0 0 auto;
-    min-width: 0;
-  }
-
-  a {
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  #theme-toggle a {
-    width: 2.5rem;
-  }
-
-  > .masthead__menu-item--lg {
-    padding-right: 0;
-  }
-}
-
 /* Keep the theme and overflow controls reachable with enlarged text. */
 .greedy-nav--compact .masthead__menu-item--lg a {
   max-width: var(--nav-brand-max-width);
   white-space: normal;
   overflow-wrap: anywhere;
-}
-
-@media (max-width: 22em) {
-  .greedy-nav--overflowing .masthead__menu-item--lg a {
-    font-size: 0.9em;
-  }
 }
 
 /* On wide screens, mirror the page grid: the brand occupies the profile
