@@ -596,114 +596,6 @@ summary:focus-visible,
   background: var(--global-surface-color);
 }
 
-.research-theme-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.research-theme {
-  padding: clamp(1.1rem, 2.2vw, 1.6rem);
-  border: 1px solid var(--global-border-color);
-  border-top: 3px solid var(--global-accent-color);
-  border-radius: 3px;
-  background: var(--global-surface-color);
-}
-
-.page__content .research-theme-grid .research-theme + .research-theme {
-  margin-top: 0;
-}
-
-.page__content .research-theme h2 {
-  margin-bottom: 0.85rem;
-  padding: 0;
-  border: 0;
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-  line-height: 1.28;
-}
-
-.research-theme > :last-child {
-  margin-bottom: 0;
-}
-
-.research-details {
-  margin-top: clamp(2.5rem, 5vw, 3.75rem);
-}
-
-.research-topic-list {
-  display: grid;
-  gap: 0.75rem;
-}
-
-.research-topic {
-  min-width: 0;
-  border: 1px solid var(--global-border-color);
-  border-radius: 3px;
-  background: var(--global-bg-color);
-}
-
-.research-topic > summary {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
-  padding: clamp(1rem, 2vw, 1.25rem);
-  color: var(--global-heading-color);
-  font-size: clamp(1.05rem, 1.8vw, 1.28rem);
-  font-weight: 600;
-  line-height: 1.3;
-  list-style: none;
-}
-
-.research-topic > summary::-webkit-details-marker {
-  display: none;
-}
-
-.research-topic > summary::after {
-  flex: 0 0 auto;
-  width: 0.58rem;
-  height: 0.58rem;
-  border-right: 2px solid var(--global-accent-color);
-  border-bottom: 2px solid var(--global-accent-color);
-  transform: rotate(45deg) translateY(-0.15rem);
-  transition: transform 160ms ease;
-  content: "";
-}
-
-.research-topic[open] > summary {
-  color: var(--global-accent-color);
-}
-
-.research-topic[open] > summary::after {
-  transform: rotate(225deg) translate(-0.1rem, -0.1rem);
-}
-
-.research-topic__body {
-  padding: 0 clamp(1rem, 2vw, 1.25rem) clamp(1rem, 2vw, 1.25rem);
-  border-top: 1px solid var(--global-border-color);
-}
-
-.research-topic__body > p {
-  margin: 1rem 0 1.25rem;
-}
-
-.research-publications {
-  padding-top: 1rem;
-  border-top: 1px solid var(--global-border-color);
-}
-
-.page__content .research-publications h3 {
-  margin: 0 0 0.8rem;
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.research-publications .publication:last-child {
-  margin-bottom: 0;
-}
-
 .all-publications {
   margin-top: 2.5rem;
 }
@@ -813,16 +705,6 @@ summary:focus-visible,
   line-height: 1.5;
 }
 
-@media (max-width: 52em) {
-  .research-theme-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .page__content .research-theme-grid .research-theme + .research-theme {
-    margin-top: 0;
-  }
-}
-
 @media (max-width: 42em) {
   .directory-section {
     grid-template-columns: minmax(0, 1fr);
@@ -842,28 +724,6 @@ summary:focus-visible,
   .directory-section--expandable .people-list {
     columns: 3;
   }
-}
-
-.publication-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.page__content .publication {
-  margin-bottom: 1rem;
-  font-size: 0.9em;
-  line-height: 1.5;
-}
-
-.publication > a,
-.publication__authors,
-.publication__venue {
-  display: block;
-}
-
-.publication__venue {
-  font-style: italic;
 }
 
 .page__content .entry-meta {
@@ -1103,7 +963,7 @@ summary:focus-visible,
   margin-bottom: 0;
 }
 
-/* Landing page: introduction, research aim, then the existing event notice. */
+/* Landing page: introduction, research aim, then featured event notices. */
 .landing-hero {
   margin-bottom: 2rem;
 }
@@ -1164,11 +1024,12 @@ summary:focus-visible,
   margin: 0;
 }
 
-.landing-research > p + p {
-  margin-top: -0.25rem;
+.page__content .landing-research + .landing-research {
+  margin-top: 0;
+  border-top: 0;
 }
 
-.goemmi-feature {
+.landing-feature {
   display: grid;
   grid-template-columns: 110px minmax(0, 1fr);
   gap: 1.25rem 1.75rem;
@@ -1181,58 +1042,82 @@ summary:focus-visible,
   border-radius: 3px;
 }
 
-.goemmi-feature__logo {
+.landing-feature__logo {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.page__content .goemmi-feature__logo img {
+.page__content .landing-feature__logo img,
+.landing-feature__mark {
   display: block;
   width: 110px;
   height: 110px;
   margin: 0;
-  /* The supplied logo has black lettering on a transparent background. */
-  padding: 0.35rem;
   background: #ffffff;
   border-radius: 2px;
+}
+
+.page__content .landing-feature__logo img {
+  /* The supplied logo has black lettering on a transparent background. */
+  padding: 0.35rem;
   object-fit: contain;
 }
 
-.page__content .goemmi-feature h2 {
+.landing-feature__mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--global-accent-color);
+  border: 1px solid var(--global-border-color);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+}
+
+.page__content .landing-feature h3 {
   margin: 0 0 0.65rem;
   padding: 0;
   border: 0;
   font-size: 1.6em;
 }
 
-.goemmi-feature__subtitle {
+.landing-feature__subtitle {
   margin-bottom: 0.75rem;
   font-weight: 600;
 }
 
-.goemmi-feature__meta,
-.goemmi-feature__action p {
+.landing-feature__meta,
+.landing-feature__action p {
   font-size: 0.9em;
   margin-bottom: 0.75rem;
 }
 
-.goemmi-feature__action {
+.landing-feature__action {
   grid-column: 2;
 }
 
-.goemmi-feature__action .btn {
+.landing-feature__action .btn {
   max-width: 100%;
   margin: 0;
   white-space: normal;
 }
 
+.landing-all-events {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.landing-events .landing-feature:first-of-type {
+  margin-top: 1.25rem;
+}
+
 @media (min-width: 1280px) {
-  .goemmi-feature {
+  .landing-feature {
     grid-template-columns: 110px minmax(0, 1fr) minmax(200px, 0.7fr);
   }
 
-  .goemmi-feature__action {
+  .landing-feature__action {
     grid-column: auto;
     padding-left: 1.5rem;
     border-left: 1px solid var(--global-border-color);
@@ -1248,20 +1133,21 @@ summary:focus-visible,
     grid-column: auto;
   }
 
-  .goemmi-feature {
+  .landing-feature {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .goemmi-feature__logo {
+  .landing-feature__logo {
     justify-content: flex-start;
   }
 
-  .page__content .goemmi-feature__logo img {
+  .page__content .landing-feature__logo img,
+  .landing-feature__mark {
     width: 80px;
     height: 80px;
   }
 
-  .goemmi-feature__action {
+  .landing-feature__action {
     grid-column: auto;
   }
 }

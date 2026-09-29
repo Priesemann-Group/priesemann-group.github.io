@@ -332,7 +332,7 @@
 }
 
 /* On wide screens, mirror the page grid: the brand occupies the profile
-   rail, Research begins at the main-content edge, and the remaining controls
+   rail, People begins at the main-content edge, and the remaining controls
    are distributed to the content's right edge. At narrower widths the
    priority menu keeps its natural-width layout and moves items into overflow. */
 @include breakpoint($large) {

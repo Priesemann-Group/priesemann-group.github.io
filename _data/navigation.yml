@@ -1,6 +1,4 @@
 main:
-  - title: "Research"
-    url: /research/
   - title: "People"
     url: /group/
   - title: "Join Us"
