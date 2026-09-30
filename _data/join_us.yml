@@ -113,10 +113,11 @@ recurring_programs:
     title: "CIDAS Fellowship"
     audience: "Early-career postdocs"
     icon: person-workspace
-    application_window: "Calls offered regularly"
+    application_window: "Deadline: Sunday, November 8, 2026"
     description: >-
       CIDAS regularly offers fellowships for early-career postdocs developing independent data-science
-      projects. Check the current call and contact us early if you would like our group to host your project.
+      projects. If you are interested in applying with our group as your host, please contact us.
+      Submit your application by email to <a href="mailto:cidas@uni-goettingen.de">cidas@uni-goettingen.de</a>.
     url: "https://www.uni-goettingen.de/en/cidas%2Bfellowship/694026.html"
     link_label: "Explore the CIDAS Fellowship"
 
