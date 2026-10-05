@@ -1,0 +1,15 @@
+---
+layout: single
+---
+
+<div class="content redirect-notice">
+  <h1>{{ page.title | escape }}</h1>
+  <p>
+    This page has moved to
+    <a href="{{ page.redirect_to | relative_url }}">{{ page.redirect_to | relative_url }}</a>.
+  </p>
+</div>
+
+<script>
+  window.location.replace({{ page.redirect_to | relative_url | jsonify }});
+</script>

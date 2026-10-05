@@ -1,0 +1,122 @@
+---
+permalink: /join-us/
+title: Join Us
+description: Research positions, recurring programs, fellowships, and degree programs connected to the Priesemann Group.
+---
+
+{% assign positions_by_date = site.data.join_us.specific_positions | sort: "posted" | reverse %}
+{% assign open_positions = positions_by_date | where: "status", "open" %}
+{% assign closed_positions = positions_by_date | where: "status", "closed" %}
+
+<div class="row identity bg-light text-dark">
+  <h1 class="col col-xl-10 col-md-12 align-self-center">Join Us</h1>
+  <p class="col col-xl-10 col-md-12 align-self-center">
+    At any time, we welcome applications from creative researchers of all nationalities and at all levels
+    <strong>(Bachelor’s and Master’s theses, PhD, and postdoc)</strong>. In Germany, it is common to apply
+    to research groups even when no specific position is advertised. If our research closely matches
+    your interests, please do not hesitate to send us your application.
+  </p>
+</div>
+
+<div class="content join-us-overview">
+  <section class="join-section" id="general-applications" aria-labelledby="general-applications-title">
+    <h2 id="general-applications-title">How to apply</h2>
+
+    <div class="application-guidance">
+      <div class="application-guidance__block">
+        <h3>Application documents</h3>
+        <p>
+          Please send a <em>single PDF</em> to
+          <a href="mailto:application.priesemann@ds.mpg.de">application.priesemannATds.mpg.de</a>, including:
+        </p>
+        <ul class="application-documents">
+          <li>Short letter of motivation</li>
+          <li>CV</li>
+          <li>Transcript of records</li>
+          <li>Names of referees</li>
+        </ul>
+      </div>
+
+      <div class="application-guidance__block">
+        <h3>Skills and use of AI</h3>
+        <p>
+          Please also include an informative statement about your programming, AI/ML, and/or analytical
+          skills, and explain how you used AI tools to prepare your application.
+        </p>
+      </div>
+
+      <div class="application-guidance__note">
+        <h3>Equal opportunity</h3>
+        <p>We encourage applicants from all backgrounds and genders to contact us.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="join-section join-section--recurring" aria-labelledby="recurring-programs-title">
+    <h2 id="recurring-programs-title">Programs &amp; Fellowships</h2>
+    <p>
+      These programs offer funded routes into Master’s, PhD, and postdoctoral research. Where permitted,
+      our group can serve as a potential research or host group.
+    </p>
+    <div class="join-program-grid">
+      {% for program in site.data.join_us.recurring_programs %}
+        {% include join-program-card.html program=program %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="join-section" aria-labelledby="degree-programs-title">
+    <h2 id="degree-programs-title">Degree programs in Göttingen</h2>
+    <p>
+      Interested in studying physics or data science in Göttingen? These degree programs offer routes
+      from a broad undergraduate foundation to specialized, research-oriented Master’s study.
+    </p>
+    <div class="join-program-grid">
+      <article class="join-program join-program--secondary">
+        <h3>Physik+ (B.Sc.)</h3>
+        <p> The four-year Bachelor “Physik Interdisziplinär” combines a strong foundation in physics with flexible interdisciplinary pathways such as artificial intelligence, philosophy, or sustainability. </p>
+        <a href="https://physikgoettingen.magister.de/" target="_blank" rel="noopener noreferrer" > Discover Physik+ </a>
+      </article>
+      <article class="join-program join-program--secondary">
+        <h3>Physics (B.Sc.)</h3>
+        <p> The standard six-semester Bachelor of Science in Physics provides a broad foundation in experimental and theoretical physics. </p>
+        <a href="https://www.uni-goettingen.de/de/594378.html" target="_blank" rel="noopener noreferrer" > Explore the Physics B.Sc. </a>
+      </article>
+      <article class="join-program join-program--secondary">
+        <h3>Physics (M.Sc./Joint Degree)</h3>
+        <p> The research-oriented Master of Science in Physics offers advanced study and specialization across Göttingen’s broad physics research landscape. </p>
+        <a href="https://www.uni-goettingen.de/de/594492.html" target="_blank" rel="noopener noreferrer" > Explore the Physics M.Sc. </a>
+      </article>
+      <article class="join-program join-program--secondary">
+        <h3>Applied Data Science (M.Sc.)</h3>
+        <p>
+          We also recommend this program to German and international students. It can be studied without
+          German, and a student job may help fund your studies.
+        </p>
+        <p class="entry-meta">Usual application deadlines: 1 May and 1 November each year.</p>
+        <a href="https://www.uni-goettingen.de/en/applied+data+science+m.sc./642405.html" target="_blank" rel="noopener noreferrer">Program information and application portal</a>
+      </article>
+    </div>
+  </section>
+
+  {% if open_positions.size > 0 %}
+    <section class="join-section" aria-labelledby="specific-positions-title">
+      <h2 id="specific-positions-title">Specific open positions</h2>
+      <p>Calls and PhD programs with topic-specific details and external deadlines.</p>
+      {% for position in open_positions %}
+        {% include join-position-card.html position=position %}
+      {% endfor %}
+    </section>
+  {% endif %}
+
+  {% if closed_positions.size > 0 %}
+    <details class="join-archive">
+      <summary>Previous calls</summary>
+      <div class="join-archive__content">
+        {% for position in closed_positions %}
+          {% include join-position-card.html position=position %}
+        {% endfor %}
+      </div>
+    </details>
+  {% endif %}
+</div>

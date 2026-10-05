@@ -76,13 +76,13 @@
   text-decoration: none;
 }
 
-.blog-card__link .bi {
+.blog-card__arrow {
   font-size: 1rem;
   transition: transform 0.2s ease-in-out;
 }
 
-.blog-card__link:hover .bi,
-.blog-card__link:focus-visible .bi {
+.blog-card__link:hover .blog-card__arrow,
+.blog-card__link:focus-visible .blog-card__arrow {
   transform: translateX(0.2rem);
 }
 

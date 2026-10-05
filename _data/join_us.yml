@@ -88,33 +88,30 @@ recurring_programs:
   - id: matter-to-life
     title: "Max Planck School Matter to Life (MtL)"
     audience: "Integrated MSc / PhD"
-    icon: bounding-box-circles
     application_window: "September 1–December 1 each year"
     description: >-
       How does life emerge from matter? This fully funded five-year program combines a two-year
-      interdisciplinary Master’s phase with a three-year PhD research phase. It is open to applicants
-      with a Bachelor’s or Master’s degree. We particularly recommend it to Master’s graduates: the
-      first two years provide valuable preparation, with ample time for research and for developing
-      a PhD project.
+      interdisciplinary Master’s phase with a three-year PhD research phase and is open to students
+      with a Bachelor or Master degree. We recommend this program explicitly also to students who
+      already have a Master’s degree, because the first two years offer ample time for research,
+      preparing your PhD project.
     url: "https://mattertolife.maxplanckschools.org/apply-to-the-mps-mtl"
     link_label: "Explore Matter to Life"
 
   - id: mp-aix
     title: "Max Planck Artificial Intelligence Network (MP-AIX)"
     audience: "PhD"
-    icon: cpu
     application_window: "October 1–31 each year"
     description: >-
-      MP-AIX connects artificial intelligence methods with scientific application fields. It centrally
-      co-funds 50% of the personnel costs for new PhD positions, with the remaining funding provided by
-      the participating institutes, and matches shortlisted applicants with potential advisors.
+      MP-AIX connects artificial intelligence methods with scientific application fields. It co-funds
+      new PhD positions through a central recruiting process and matches shortlisted applicants with
+      potential advisors.
     url: "https://ai.mpg.de/how-to-join-phd"
     link_label: "Explore MP-AIX"
 
   - id: cidas-fellowship
     title: "CIDAS Fellowship"
     audience: "Early-career postdocs"
-    icon: person-workspace
     application_window: "Deadline: Sunday, November 8, 2026"
     description: >-
       CIDAS regularly offers fellowships for early-career postdocs developing independent data-science
@@ -126,7 +123,6 @@ recurring_programs:
   - id: goettingen-neurosciences
     title: "Annual PhD positions: Experimental and Computational Neuroscience"
     audience: "MSc / PhD / MD-PhD"
-    icon: diagram-3
     application_window: "September 15–January 15 each year"
     description: >-
       Each year, the Göttingen Campus opens several PhD positions in experimental and computational neuroscience.

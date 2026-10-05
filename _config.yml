@@ -1,19 +1,19 @@
 locale: "en-US"
 theme: null
 site_theme: "priesemann"
-title: "MPRG Priesemann"
+title: "Priesemann Group"
 title_separator: "-"
-name: "PriesemannLab"
+name: "Priesemann Group"
 description: "Physics, Complex Systems & Neural Networks"
 url: "https://priesemann-group.github.io"
 baseurl: ""
 repository: "Priesemann-Group/priesemann-group.github.io"
 
 author:
-  avatar: "viola_400x400.jpg"
-  avatar_light: "viola_400x400_blue.jpg"
+  avatar: "/assets/images/viola-priesemann-dark.jpg"
+  avatar_light: "/assets/images/viola-priesemann-light.jpg"
   name: "Prof. Dr. Viola Priesemann"
-  bio: "Max Planck Research Group Leader Complex Systems Theory"
+  bio: "Max Planck Research Group Leader, Complex Systems Theory"
   location: "Göttingen"
   location_url: "https://en.wikipedia.org/wiki/G%C3%B6ttingen"
   employer: "MPI for Dynamics and Self-Organization"
@@ -32,7 +32,6 @@ exclude:
   - .github
   - .jekyll-assets-cache
   - .sass-cache
-  - content/overview.html
   - Gemfile
   - Gemfile.lock
   - LICENSE

@@ -4,14 +4,14 @@
 <div itemscope itemtype="https://schema.org/Person">
   <div class="author__avatar">
     <img
-      src="{{ author.avatar_light | prepend: '/images/' | prepend: base_path }}"
+      src="{{ author.avatar_light | relative_url }}"
       class="author__avatar author__avatar--light"
       alt="{{ author.name | escape }}"
       fetchpriority="high"
       itemprop="image"
     >
     <img
-      src="{{ author.avatar | prepend: '/images/' | prepend: base_path }}"
+      src="{{ author.avatar | relative_url }}"
       class="author__avatar author__avatar--dark"
       alt=""
       aria-hidden="true"
@@ -33,42 +33,42 @@
     <ul id="author-profile-links" class="author__urls social-icons">
       <li class="author__desktop author__location">
         <a href="{{ author.location_url | escape }}" rel="noopener noreferrer">
-          <i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}
+          {{ author.location }}
         </a>
       </li>
       <li class="author__desktop author__affiliation">
         <a href="{{ author.employer_url | escape }}" rel="noopener noreferrer">
-          <i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}
+          {{ author.employer }}
         </a>
       </li>
       <li>
         <a href="{{ author.arxiv | escape }}" rel="noopener noreferrer">
-          <i class="ai ai-arxiv ai-fw icon-pad-right" aria-hidden="true"></i>arXiv
+          arXiv
         </a>
       </li>
       <li>
         <a href="{{ author.googlescholar | escape }}" rel="noopener noreferrer">
-          <i class="ai ai-google-scholar ai-fw icon-pad-right" aria-hidden="true"></i>Google Scholar
+          Google Scholar
         </a>
       </li>
       <li>
         <a href="{{ author.orcid | escape }}" rel="noopener noreferrer">
-          <i class="ai ai-orcid ai-fw icon-pad-right" aria-hidden="true"></i>ORCID
+          ORCID
         </a>
       </li>
       <li>
         <a href="https://github.com/{{ author.github | escape }}" rel="noopener noreferrer">
-          <i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub
+          GitHub
         </a>
       </li>
       <li>
         <a href="{{ author.mastodon | escape }}" rel="me noopener noreferrer">
-          <i class="fab fa-fw fa-mastodon icon-pad-right" aria-hidden="true"></i>Mastodon
+          Mastodon
         </a>
       </li>
       <li>
         <a href="https://twitter.com/{{ author.twitter | escape }}" rel="noopener noreferrer">
-          <i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>X
+          X
         </a>
       </li>
     </ul>

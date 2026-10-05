@@ -1,7 +1,6 @@
 categories:
   - id: postdoctoral-researchers
     title: Postdoctoral Researchers
-    icon: award
     members:
       - name: Dr. David Ehrlich
         url: https://scholar.google.com/citations?user=_wyKzcwAAAAJ
@@ -12,13 +11,12 @@ categories:
       - name: Dr. Lucas Rudelt
         url: https://scholar.google.com/citations?user=wPpGhg4AAAAJ&hl
       - name: Dr. Andreas Schneider
-        url: http://ac-schneider.com
+        url: https://ac-schneider.com
       - name: Dr. Johannes Zierenberg
         url: https://zierenberg.github.io/
 
   - id: doctoral-researchers
     title: Doctoral Researchers
-    icon: journal-text
     members:
       - name: Simon Bauer
         url: https://scholar.google.com/citations?user=5w89ciEAAAAJ&hl
@@ -35,16 +33,13 @@ categories:
       - name: Valentin Neuhaus
         url: https://scholar.google.com/citations?user=DgQiA-wAAAAJ
       - name: Irene Pellini
-      - name: Yashee Sinha
       - name: Roman Ventzke
         url: https://scholar.google.com/citations?user=YR9DdQUAAAAJ
 
   - id: students
     title: Master’s & Bachelor’s Students
-    icon: book
     members:
       - name: Hendrik von der Haar
-      - name: Heinrich Fischer
       - name: Anna-Lotta Höper
       - name: Antonio B. Marín-Carballo
         url: https://scholar.google.com/citations?user=iicSOtkAAAAJ&hl
@@ -53,26 +48,25 @@ categories:
 
   - id: visiting-affiliated-researchers
     title: Visiting & Affiliated Researchers
-    icon: globe2
     members:
       - name: Dr. Sebastian Contreras
-        url: http://seba-contreras.github.io
-      - name: Dominik Hammer
+        url: https://seba-contreras.github.io
+      - name: Dr. Dominik Hammer
       - name: Darius Lewen
         url: https://scholar.google.com/citations?user=cA8IzSoAAAAJ&hl
       - name: Sebastian Mohr
         url: https://semohr.github.io
       - name: Carlos Ernesto Munoz (with Michael Wibral)
-      - name: Sabina Nowakowska (UMG), jointly supervised with Antoine Huet
+      - name: Amir Naderi (with Jan Clemens)
       - name: Marcel Raabe (with Michael Wibral)
         url: https://scholar.google.de/citations?user=pgFBKQ4AAAAJ&hl
       - name: Tim Schäfer (with Anna Levina, Tübingen)
         url: https://scholar.google.com/citations?user=MUVBVYsAAAAJ
+      - name: Yashee Sinha (Oxford)
 
   # Alumni are ordered alphabetically by surname (ignoring academic titles).
   - id: alumni
     title: Alumni
-    icon: clock-history
     members:
       - name: Ahmet Akman (Middle East Technical University)
         url: https://ahmetakman.github.io
@@ -93,6 +87,7 @@ categories:
       - name: Melvin Dix
       - name: Dr. Philipp Dönges
       - name: Samuel L. Erdmann
+      - name: Heinrich Fischer
       - name: Jens Friedel
       - name: Jan Geisler (Max Planck School “Matter to Life”)
       - name: Philipp Gödde
@@ -114,6 +109,7 @@ categories:
       - name: Matthias Loidolt (UCL)
       - name: Dr. Fabian Mikulasch
       - name: Dr. Corentin Nelias
+      - name: Sabina Nowakowska (UMG), jointly supervised with Antoine Huet
       - name: Dr. Joao Pinheiro Neto (MPI-DS Göttingen)
         url: https://joaopn.github.io/
       - name: Agastya Rana
