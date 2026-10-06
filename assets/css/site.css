@@ -76,12 +76,6 @@ body,
   bottom: auto;
 }
 
-.theme-icon {
-  display: inline-block;
-  font-size: 1.15rem;
-  line-height: 1;
-}
-
 .page__content h1,
 .page__content h2,
 .page__content h3,
@@ -946,6 +940,25 @@ summary:focus-visible,
   display: flex;
   align-items: flex-start;
   white-space: normal;
+}
+
+.icon-pad-right {
+  padding-right: 0.5em;
+  margin-right: 0.5em;
+}
+
+.sidebar .social-icons i,
+.sidebar .social-icons .ai,
+.sidebar .social-icons .fab,
+.sidebar .social-icons .fas,
+.sidebar .social-icons .far {
+  color: var(--global-accent-color) !important;
+}
+
+.author__urls .author__location i,
+.author__urls .author__affiliation i {
+  flex: 0 0 auto;
+  margin-top: 0.2em;
 }
 
 .author__urls li {

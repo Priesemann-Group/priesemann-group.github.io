@@ -32,7 +32,13 @@ categories:
         url: https://scholar.google.com/citations?user=KHQ3Gd8AAAAJ&hl
       - name: Valentin Neuhaus
         url: https://scholar.google.com/citations?user=DgQiA-wAAAAJ
+      - name: Sydney Paltra (with Kai Nagel)
+        url: https://scholar.google.com/citations?user=AFbZ00EAAAAJ
       - name: Irene Pellini
+      - name: Marcel Raabe (with Michael Wibral)
+        url: https://scholar.google.de/citations?user=pgFBKQ4AAAAJ&hl
+      - name: Tim Schäfer (with Anna Levina)
+        url: https://scholar.google.com/citations?user=MUVBVYsAAAAJ
       - name: Roman Ventzke
         url: https://scholar.google.com/citations?user=YR9DdQUAAAAJ
 
@@ -44,6 +50,8 @@ categories:
       - name: Antonio B. Marín-Carballo
         url: https://scholar.google.com/citations?user=iicSOtkAAAAJ&hl
       - name: Veronika Niemeyer
+      - name: Thorge von der Ohe
+      - name: Angelica Sierra Romero
       - name: Leoni Wendt
 
   - id: visiting-affiliated-researchers
@@ -58,10 +66,6 @@ categories:
         url: https://semohr.github.io
       - name: Carlos Ernesto Munoz (with Michael Wibral)
       - name: Amir Naderi (with Jan Clemens)
-      - name: Marcel Raabe (with Michael Wibral)
-        url: https://scholar.google.de/citations?user=pgFBKQ4AAAAJ&hl
-      - name: Tim Schäfer (with Anna Levina, Tübingen)
-        url: https://scholar.google.com/citations?user=MUVBVYsAAAAJ
       - name: Yashee Sinha (Oxford)
 
   # Alumni are ordered alphabetically by surname (ignoring academic titles).

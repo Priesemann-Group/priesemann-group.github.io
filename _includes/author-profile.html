@@ -33,42 +33,42 @@
     <ul id="author-profile-links" class="author__urls social-icons">
       <li class="author__desktop author__location">
         <a href="{{ author.location_url | escape }}" rel="noopener noreferrer">
-          {{ author.location }}
+          <i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}
         </a>
       </li>
       <li class="author__desktop author__affiliation">
         <a href="{{ author.employer_url | escape }}" rel="noopener noreferrer">
-          {{ author.employer }}
+          <i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}
         </a>
       </li>
       <li>
         <a href="{{ author.arxiv | escape }}" rel="noopener noreferrer">
-          arXiv
+          <i class="ai ai-arxiv ai-fw icon-pad-right" aria-hidden="true"></i>arXiv
         </a>
       </li>
       <li>
         <a href="{{ author.googlescholar | escape }}" rel="noopener noreferrer">
-          Google Scholar
+          <i class="ai ai-google-scholar ai-fw icon-pad-right" aria-hidden="true"></i>Google Scholar
         </a>
       </li>
       <li>
         <a href="{{ author.orcid | escape }}" rel="noopener noreferrer">
-          ORCID
+          <i class="ai ai-orcid ai-fw icon-pad-right" aria-hidden="true"></i>ORCID
         </a>
       </li>
       <li>
         <a href="https://github.com/{{ author.github | escape }}" rel="noopener noreferrer">
-          GitHub
+          <i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub
         </a>
       </li>
       <li>
         <a href="{{ author.mastodon | escape }}" rel="me noopener noreferrer">
-          Mastodon
+          <i class="fab fa-fw fa-mastodon icon-pad-right" aria-hidden="true"></i>Mastodon
         </a>
       </li>
       <li>
         <a href="https://twitter.com/{{ author.twitter | escape }}" rel="noopener noreferrer">
-          X
+          <i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>X
         </a>
       </li>
     </ul>
