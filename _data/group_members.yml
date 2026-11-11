@@ -55,6 +55,7 @@ categories:
       - name: Lea Friedemann
       - name: Friederike Kornmesser
       - name: Jelle Henk Hofstede
+        url: https://github.com/jellehofstede
 
   - id: visiting-affiliated-researchers
     title: Visiting & Affiliated Researchers
@@ -69,6 +70,7 @@ categories:
       - name: Carlos E. Muñoz Amezcua
       - name: Amir Naderi (with Jan Clemens)
       - name: Yashee Sinha (Oxford)
+        url: https://scholar.google.com/citations?user=h9Ngvo0AAAAJ
       - name: Dr. David Ehrlich
         url: https://scholar.google.com/citations?user=_wyKzcwAAAAJ
       - name: Irene Levi
