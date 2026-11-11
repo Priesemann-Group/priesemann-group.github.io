@@ -2,15 +2,13 @@ categories:
   - id: postdoctoral-researchers
     title: Postdoctoral Researchers
     members:
-      - name: Dr. David Ehrlich
-        url: https://scholar.google.com/citations?user=_wyKzcwAAAAJ
       - name: Dr. Jonas Dehning
         url: https://www.jdehning.com/
       - name: Dr. Piklu Mallick
         url: https://piklumallick.github.io/
       - name: Dr. Lucas Rudelt
         url: https://scholar.google.com/citations?user=wPpGhg4AAAAJ&hl
-      - name: Dr. Andreas Schneider
+      - name: Dr. Andreas C. Schneider
         url: https://ac-schneider.com
       - name: Dr. Johannes Zierenberg
         url: https://zierenberg.github.io/
@@ -54,20 +52,26 @@ categories:
       - name: Thorge von der Ohe
       - name: Angelica Sierra Romero
       - name: Leoni Wendt
+      - name: Lea Friedemann
+      - name: Friederike Kornmesser
+      - name: Jelle Henk Hofstede
 
   - id: visiting-affiliated-researchers
     title: Visiting & Affiliated Researchers
     members:
-      - name: Dr. Sebastian Contreras
+      - name: Prof. Dr. Seba Contreras
         url: https://seba-contreras.github.io
       - name: Dr. Dominik Hammer
       - name: Darius Lewen
         url: https://scholar.google.com/citations?user=cA8IzSoAAAAJ&hl
       - name: Sebastian Mohr
         url: https://semohr.github.io
-      - name: Carlos Ernesto Munoz (with Michael Wibral)
+      - name: Carlos E. Muñoz Amezcua
       - name: Amir Naderi (with Jan Clemens)
       - name: Yashee Sinha (Oxford)
+      - name: Dr. David Ehrlich
+        url: https://scholar.google.com/citations?user=_wyKzcwAAAAJ
+      - name: Irene Levi
 
   # Alumni are ordered alphabetically by surname (ignoring academic titles).
   - id: alumni
