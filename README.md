@@ -22,4 +22,14 @@ when a source file changes. Stop it with `Ctrl+C`.
 The first invocation installs the dependencies from `Gemfile` into
 `vendor/bundle`; subsequent starts reuse them.
 
+## Contributing
+
+Before changing anything, read [`AGENTS.md`](AGENTS.md). It describes the git
+workflow (one branch per task from `master`, pull request to `master`), where
+content lives, the design and coding conventions, and which pages need
+sign-off. It applies to people and coding agents alike; `CLAUDE.md` only points
+Claude Code to the same file.
+
+## License
+
 The Academic Pages template is distributed under the license in `LICENSE`.
